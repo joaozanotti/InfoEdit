@@ -1,0 +1,29 @@
+.login {
+    border: 3px solid #000;
+    border-radius: 10px;
+    background-color: #ebeaea;
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin: auto;
+}
+
+.login input[type="number"] {
+    width: 40%;
+    margin-bottom: 20px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.login input[type="button"] {
+    width: 20%;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.login h1 {
+    font-size: 1.8em;
+}

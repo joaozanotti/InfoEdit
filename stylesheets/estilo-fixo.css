@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Mate+SC&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300&display=swap');
+body{
+   font-family: ubuntu;
+   font-weight: bold;
+}
+
+/* HEADER-------------------------------------------------------------------------------------------- */
+
+#logoHeader {
+   display: inline;
+   width: 10%;
+   margin-left: 50px;
+}
+
+header {
+   background-color: rgb(10, 10, 65);
+}
+
+ul {
+   display: flex;
+   position: absolute;
+   top: 100px;
+   right: 50px;
+}
+
+.opcoesCabecalho {
+   color: white;
+   display: inline;
+   margin-right: 50px;
+   font-weight: bold;
+   text-decoration: none;
+   font-size: 18px;
+   cursor: pointer;
+}
+
+#campoPesquisa{
+   color: white;
+   display: inline;
+   margin-right: 100px;
+   font-weight: bold;
+   font-size: 18px;
+   cursor: pointer;
+}
+
+#botaoHeader{
+   background-color: rgb(10, 10, 65);
+   border-radius: 5px;
+   padding: 2px;
+}
+
+.opcoesCabecalho:hover {
+   color: rgb(228, 128, 228);
+}
+
+/* HEADER-------------------------------------------------------------------------------------------- */
+
+/* FOOTER-------------------------------------------------------------------------------------------- */
+#logoFooter {
+   width: 10%;
+   padding-top: 20px;
+}
+
+footer {
+   background-color: rgb(10, 10, 65);
+   text-align: center;
+}
+footer p{
+   color: white;
+   font-size: 11px;
+   padding: 10px 0 20px 0;
+}
+/* FOOTER-------------------------------------------------------------------------------------------- */

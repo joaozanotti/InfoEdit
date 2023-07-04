@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Notícias - INFOEDIT</title>
+    <link rel="stylesheet" href="../stylesheets/reset.css">
+    <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
+    <link rel="stylesheet" href="../stylesheets/formulario.css">
+</head>
+
+<body>
+    <!--Cabeçalho comum do site-->
+    <header>
+        <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
+        <nav>
+            <ul>
+                <li><a class="opcoesCabecalho" href="página-inicial.html">INÍCIO</a></li>
+                <li><a class="opcoesCabecalho" href="inserir-noticias.html">INSERIR</a></li>
+                <li><a class="opcoesCabecalho" href="editar-noticias.html">EDITAR</a></li>
+                <li><a class="opcoesCabecalho" href="excluir-noticias.html">EXCLUIR</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Corpo da págima inicial do site -->
+    <main>
+        <h1>Edite uma Noticia</h1>
+        <form action="processar_formulario.php" method="POST">
+            <div class="form-group">
+                <label for="nome">Título da Matéria:</label>
+                <input type="text" id="inTitulo" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="texto">Texto da Matéria:</label>
+                <textarea type="text" id="inTexto" name="texto" rows="10" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="autor">Autor da Matéria:</label>
+                <input type="text" id="inAutor" name="autor" required>
+            </div>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    <!-- Rodapé comum do site -->
+    <footer>
+        <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logoMenor.png" alt="logo">
+        <p id="copyright">&copy; Copyright INFOEDIT</p>
+    </footer>
+</body>
+
+</html>

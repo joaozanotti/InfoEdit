@@ -1,0 +1,22 @@
+.noticia img {
+    width: 50%;
+    margin: 1em 0;
+}
+
+.noticia h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.noticia {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.noticia article {
+    text-align: justify;
+    margin: 20px 0;
+    font-size: 20px;
+}

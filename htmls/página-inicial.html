@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <!-- Código realizado por João Vitor, Giovanna, Sindy, Adrian e Laura - TEMA: Gerenciamento de um site de notícias - entrega de código parcial. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Home  - INFOEDIT</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
@@ -19,13 +21,17 @@
                 <ul>
                     <li><a class="opcoesCabecalho" href="página-inicial.html">INÍCIO</a></li>
                     <li><a class="opcoesCabecalho" href="login.html">LOGIN</a></li>
-                    <li id="campoPesquisa"><input type="text"><input id="botaoHeader" type="button" value="🔎"></li>
+                    <li id="campoPesquisa">
+                        <input type="text" id="inBuscaAutor">
+                        <input id="btHeader" type="button" value="🔎">
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
     <!-- Corpo da págima inicial do site -->
     <main>
+        <article id="artigo"></article>
         <div id="outMaterias"></div>
     </main>
     <!-- Rodapé comum do site -->
@@ -34,8 +40,10 @@
         <p id="copyright">&copy; Copyright INFOEDIT</p>
     </footer>
 
+    <script src="../javascript/vetore.js"></script>
     <script src="../javascript/main.js"></script>
-    <script src="../javascript/busca.js"></script>
+    <!-- <script src="../javascript/busca.js"></script> -->
+    <script src="../javascript/buscaAutor.js"></script>
 </body>
 
 </html>

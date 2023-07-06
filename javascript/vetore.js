@@ -28,9 +28,9 @@ var vetTitulo = [
 
   var vetImagens = [
     "imgHomemParaplegico.png",
-    "noticia2.png",
-    "noticia3.png",
-    "noticia4.png",
-    "noticia5.png",
-    "noticia6.png",
+    "imgAreasInteligenciaArtificial.png",
+    "imgUnicoRestauranteDoMundo.png",
+    "imgTransplanteCerebro.png",
+    "imgRadicalInfluenciaTecnologia.png",
+    "imgMeninasNoLimite.png"
 ];

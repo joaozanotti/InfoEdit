@@ -1,8 +1,6 @@
 //Referenciando o hltml;
 const inBuscaAutor = document.getElementById("inBuscaAutor");
 const btHeader = document.getElementById("btHeader");
-const artigo = document.getElementById("artigo");
-
 
 inBuscaAutor.addEventListener("keyup", buscarAutor);
 
@@ -39,7 +37,7 @@ function buscarAutor() {
       divMateria.appendChild(h6);
 
       outMaterias.appendChild(divMateria);
-  
+
 
     }
   }

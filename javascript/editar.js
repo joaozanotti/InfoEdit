@@ -51,10 +51,10 @@ function pesquisaEditar() {
 var idAtual;
 
 function inserirDados() {
-    formEditar.style.display = "block";
     var idClicado = this.id;
     idAtual = idClicado.substring(8);
 
+    formEditar.style.display = "block";
     inTitulo.value = vetTitulo[idAtual];
     inTexto.value = vetTexto[idAtual];
     inAutor.value = vetAutor[idAtual];
@@ -66,12 +66,15 @@ function editar() {
     if (vetTitulo[idAtual] == inTitulo.value && vetTexto[idAtual] == inTexto.value && vetAutor[idAtual] == inAutor.value) {
         alert("Realize alguma edição.");
 
+    } else if (inTitulo.value == "" || inTexto.value == "" || inAutor.value == "") {
+        alert("Os dados não podem ser vazios.");
+
     } else {
         vetTitulo[idAtual] = inTitulo.value;
         vetTexto[idAtual] = inTexto.value;
         vetAutor[idAtual] = inAutor.value;
         formEditar.style.display = "none";
-        outMaterias.innerHTML = "Notícia alterada com sucesso!";
         inPesquisaEditar.value = "";
+        outMaterias.innerHTML = "Notícia alterada com sucesso!";
     }
 }

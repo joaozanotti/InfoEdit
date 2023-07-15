@@ -46,6 +46,9 @@ function pesquisaEditar() {
             outMaterias.appendChild(divMateria);
         }
     }
+    if (outMaterias.innerHTML == "") {
+        outMaterias.innerHTML = "Nenhuma matéria encontrada.";
+    }
 }
 
 var idAtual;

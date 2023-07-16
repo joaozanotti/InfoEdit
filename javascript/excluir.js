@@ -1,12 +1,12 @@
-const inPesquisa = document.getElementById("inPesquisa");
-const btPesquisa = document.getElementById("btPesquisa");
+const inPesquisaExcluir = document.getElementById("inPesquisaExcluir");
+const btPesquisaExcluir = document.getElementById("btPesquisaExcluir");
 const outMaterias = document.getElementById("outMaterias");
-var button;
+const btExcluir = document.getElementById("btExcluir");
 
-btPesquisa.addEventListener("click", pesquisar);
+btPesquisaExcluir.addEventListener("click", pesquisar);
 
 function pesquisar() {
-  var pesquisaTitulo = (inPesquisa.value).toUpperCase();
+  var pesquisaTitulo = (inPesquisaExcluir.value).toUpperCase();
   outMaterias.innerHTML = "";
     for (var i = 0; i < vetTitulo.length; i++) {
         let autorAux = vetTitulo[i].toUpperCase();
@@ -30,7 +30,7 @@ function pesquisar() {
             h6.innerHTML = vetAutor[i];
             h6.className = "autor";
 
-            button = document.createElement("input");
+            var button = document.createElement("input");
             button.type = "button";
             button.value = "Excluir";
             button.id = "btExcluir" + i;
@@ -47,5 +47,15 @@ function pesquisar() {
 }
 
 function excluir() {
+    var idClicado = this.id;
+    idAtual = idClicado.substring(9);
+
+    vetTitulo.splice(idAtual , 1);
+    vetAutor.splice(idAtual , 1);
+    vetImagens.splice(idAtual , 1);
+    vetTexto.splice(idAtual , 1);
     
+    inPesquisaExcluir.value = "";
+    outMaterias.innerHTML = "Notícia Excluida com sucesso!";
+
 }

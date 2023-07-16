@@ -1,36 +1,37 @@
+.materia-conteiner{
+  display: flex;
+  align-items: center;
+  width: auto;
+  max-width: 40%;
+  min-width: 35%;
+  padding: 1%;
+  margin: 5% auto;
+  background-color: rgba(10, 10, 65, 0.050);
+  border-bottom: 2px rgb(10, 10, 65) solid;
+}
+
 .materia-imagem {
-  width: 150px;
+  width: 30%;
   height: auto;
   margin-right: 20px;
 } 
 
-.materia {
-  display: flex;
+.materia-titulo{
   align-items: center;
-  width: 30% auto;
-  background-color: rgb(250, 250, 250);
-  padding: 15px;
-  margin: 50px 300px;
-  border-bottom: 1px rgb(10, 10, 65) solid;
-}
-
-.materia h3 {
-  display: flex;
   color: #333;
-  font-size: 18px;
+  font-size: 19px;
   margin-bottom: 5px;
 }
 
-.autor{
-  width: 30% auto;
+.materia-autor{
+  width: auto;
   display: flex;
   color: rgb(0, 0, 0);
   font-size: 1em;
   margin-bottom: 10px;
 }
 
-.materia a {
-  font-size: 18px;
+.materia-link{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
@@ -39,7 +40,19 @@
   color: rgb(10, 10, 65);
 }
 
-a:hover{
+.materia-link:hover{
   color: rgb(50, 50, 150);
 }
 
+#outpainelLateral
+{
+  display: flex;
+  align-items: center;
+  width: auto;
+  max-width: 40%;
+  min-width: 35%;
+  padding: 1%;
+  margin: 5% auto;
+  background-color: rgba(10, 10, 65, 0.050);
+  border-bottom: 2px rgb(10, 10, 65) solid;
+}

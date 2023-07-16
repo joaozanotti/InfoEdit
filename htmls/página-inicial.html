@@ -2,11 +2,12 @@
 
 <html lang="pt-br">
 <!-- Código realizado por João Vitor, Giovanna, Sindy, Adrian e Laura - TEMA: Gerenciamento de um site de notícias - entrega de código parcial. -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home  - INFOEDIT</title>
+    <title>Home - INFOEDIT</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
     <link rel="stylesheet" href="../stylesheets/style-main.css">
@@ -32,6 +33,32 @@
     <main>
         <article id="artigo"></article>
         <div id="outMaterias"></div>
+
+        <div id="outpainelLateral">
+
+            <div>
+                <select id="slcordenamento">
+                    <option disabled selected>escolha uma ordem</option>
+                    <option value="1">Ordem Alfabetica</option>
+                    <option value="2">Ordem de Publicaçao</option>
+                </select>
+            </div>
+
+            <div id="inlogin" class="login">
+                <h4>Login</h4>
+                <div>Senha: <input type="number" id="inSenha"></div>
+                <div><input type="button" value="Entrar" id="btLogin"></div>
+            </div>
+
+            <div>
+                <input type="text" id="intituloNoticia">
+                <input type="text" id="inautorNoticia">
+                <input type="text" id="inconteudoNoticia">
+                <input type="button" value="adicionar" id="btadicionar">
+            </div>
+
+            
+        </div>
     </main>
     <!-- Rodapé comum do site -->
     <footer>
@@ -40,8 +67,8 @@
     </footer>
 
     <script src="../javascript/vetore.js"></script>
-    <script src="../javascript/main.js"></script>
-    <!-- <script src="../javascript/busca.js"></script> -->
+    <script src="../javascript/main-noticias.js"></script>
+    <script src="../javascript/main-painel-lateral.js"></script>
     <script src="../javascript/buscaAutor.js"></script>
 </body>
 

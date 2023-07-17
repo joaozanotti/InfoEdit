@@ -15,21 +15,6 @@
 }
 
 .materia h3 {
-  display: flex;
-  color: #333;
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.autor{
-  width: 30% auto;
-  display: flex;
-  color: rgb(0, 0, 0);
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
-.materia a {
   font-size: 18px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-transform: uppercase;
@@ -39,7 +24,15 @@
   color: rgb(10, 10, 65);
 }
 
-a:hover{
+h3:hover{
   color: rgb(50, 50, 150);
+}
+
+.autor{
+  width: 30% auto;
+  display: flex;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 

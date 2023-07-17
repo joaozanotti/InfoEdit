@@ -1,5 +1,6 @@
 const inSenha = document.getElementById("inSenha");
 const btLogin = document.getElementById("btLogin");
+
 const senhaFixa = 1234;
 
 btLogin.addEventListener("click", redirecionar);

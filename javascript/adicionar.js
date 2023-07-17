@@ -1,12 +1,3 @@
-// login
-
-const inSenha = document.getElementById("inSenha");
-const btLogin = document.getElementById("btLogin");
-
-const senhaFixa = 1234;
-
-btLogin.addEventListener("click", redirecionar);
-
 // adicionar noticia
 
 const intituloNoticia = document.getElementById("intituloNoticia");
@@ -19,56 +10,6 @@ inautorNoticia.style.display = "none";
 inconteudoNoticia.style.display = "none";
 btadicionar.style.display = "none";
 
-
-// excluir noticia
-
-const inPesquisaExcluir = document.getElementById("inPesquisaExcluir");
-const btPesquisaExcluir = document.getElementById("btPesquisaExcluir");
-
-
-inPesquisaExcluir.style.display = "none"
-btPesquisaExcluir.style.display = "none"
-
-// editar noticia
-
-const inPesquisaEditar = document.getElementById("inPesquisaEditar");
-const btPesquisaEditar = document.getElementById("btPesquisaEditar");
-const outMaterias = document.getElementById("outMaterias");
-const btEnviar = document.getElementById("btEnviar");
-const formEditar = document.getElementById("formEditar");
-
-formEditar.style.display = "none";
-
-
-// login
-
-function redirecionar() {
-
-    var senha = Number(inSenha.value);
-
-    if (senha == senhaFixa) {
-
-        intituloNoticia.style.display = "block";
-        inautorNoticia.style.display = "block";
-        inconteudoNoticia.style.display = "block";
-        btadicionar.style.display = "block";
-
-        // excluir noticia
-
-
-        inPesquisaExcluir.style.display = "block"
-        btPesquisaExcluir.style.display = "block"
-
-        btadicionar.addEventListener("click", adicionar);
-        btadicionar.addEventListener("click", adicionar);
-        btadicionar.addEventListener("click", adicionar);
-
-    } else {
-        alert("Senha incorreta.");
-        inSenha.value = "";
-        inSenha.focus();
-    }
-}
 
 function adicionar() {
 

@@ -46,7 +46,7 @@
 
 #outpainelLateral
 {
-  display: flex;
+  display: row;
   align-items: center;
   width: auto;
   max-width: 40%;

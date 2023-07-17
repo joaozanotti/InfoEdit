@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
     <link rel="stylesheet" href="../stylesheets/formulario.css">
+    <link rel="stylesheet" href="../stylesheets/style-main.css">
 </head>
 
 <body>
@@ -26,30 +27,17 @@
     <!-- Corpo da págima inicial do site -->
     <main>
         <h1>Exclua uma Noticia</h1>
-        <form action="processar_formulario.php" method="POST">
-            <div class="form-group">
-                <label for="nome">Título da Matéria:</label>
-                <input type="text" id="inTitulo" name="nome" required>
-            </div>
-
-            <div class="form-group">
-                <label for="texto">Texto da Matéria:</label>
-                <textarea type="text" id="inTexto" name="texto" rows="10" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="autor">Autor da Matéria:</label>
-                <input type="text" id="inAutor" name="autor" required>
-            </div>
-
-            <input type="submit" value="Enviar">
-        </form>
+        <p>Pesquisar:<input type="search" id="inPesquisaExcluir"></p>
+        <p><input type="button" value="Pesquisar" id="btPesquisaExcluir"></p>
+        <div id="outMaterias"></div>
     </main>
     <!-- Rodapé comum do site -->
     <footer>
-        <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logoMenor.png" alt="logo">
+        <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
         <p id="copyright">&copy; Copyright INFOEDIT</p>
     </footer>
+    <script src="../javascript/vetores.js"></script>
+    <script src="../javascript/excluir.js"></script>
 </body>
 
 </html>

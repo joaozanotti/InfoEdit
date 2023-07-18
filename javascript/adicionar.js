@@ -42,7 +42,7 @@ function adicionar() {
         vetAutor.push(autorAdicionado);
         vetTexto.push(conteudoAdicionado);
 
-        outMaterias.textContent = ""
+        outMaterias.textContent = "";
 
         for (var i = 0; i < vetTitulo.length; i++) {
 
@@ -78,7 +78,7 @@ function adicionar() {
             divConteudoMateria.appendChild(h1);
             divConteudoMateria.appendChild(h3);
 
-            divConteinerMateria.appendChild(divConteudoMateria)
+            divConteinerMateria.appendChild(divConteudoMateria);
 
             outMaterias.appendChild(divConteinerMateria);
         }

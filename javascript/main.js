@@ -2,28 +2,39 @@ const outMaterias = document.getElementById("outMaterias");
 
 for (var i = 0; i < vetTitulo.length; i++) {
 
-  var divMateria = document.createElement("div");
-  divMateria.className = "materia";
+  var divConteinerMateria = document.createElement("div");
+  divConteinerMateria.className = "materia-conteiner";
+
 
   var img = document.createElement("img");
   img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
   img.className = "materia-imagem";
 
-  var h3 = document.createElement("h3");
+
+  var divConteudoMateria = document.createElement("div");
+  divConteudoMateria.className = "materia-conteudo";
+
+  var h1 = document.createElement("h1");
+  h1.className = "materia-titulo";
 
   var link = document.createElement("a");
-  link.href = "noticia" + (i+1) + ".html";
+  link.href = "noticia" + (i + 1) + ".html";
   link.innerHTML = vetTitulo[i];
+  link.className = "materia-link";
+
+  h1.appendChild(link);
+
+  var h3 = document.createElement("h3");
+  h3.innerHTML = vetAutor[i];
+  h3.className = "materia-autor";
+
   
-  h3.appendChild(link);
+  divConteinerMateria.appendChild(img);
 
-  var h6 = document.createElement("h6");
-  h6.innerHTML = vetAutor[i];
-  h6.className = "autor";
+  divConteudoMateria.appendChild(h1);
+  divConteudoMateria.appendChild(h3);
 
-  divMateria.appendChild(img);
-  divMateria.appendChild(h3);
-  divMateria.appendChild(h6);
-
-  outMaterias.appendChild(divMateria);
+  divConteinerMateria.appendChild(divConteudoMateria)
+  
+  outMaterias.appendChild(divConteinerMateria);
 }

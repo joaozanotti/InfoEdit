@@ -1,48 +1,48 @@
 
-// adicionar noticia
+const inTitulo = document.getElementById("inTitulo");
+const inAutor = document.getElementById("inAutor");
+const inTexto = document.getElementById("inTexto");
 
-const intituloNoticia = document.getElementById("intituloNoticia");
-const inautorNoticia = document.getElementById("inautorNoticia");
-const inconteudoNoticia = document.getElementById("inconteudoNoticia");
 const btadicionar = document.getElementById("btadicionar");
+
+const outMaterias = document.getElementById("outMaterias");
 
 btadicionar.addEventListener("click", adicionar);
 
 function adicionar() {
 
-    var tituloAdicionado = intituloNoticia.value;
-    var autorAdicionado = inautorNoticia.value;
-    var conteudoAdicionado = inconteudoNoticia.value;
+    outMaterias.textContent = "";
 
-
-    if (intituloNoticia.value == "") {
+    if (inTitulo.value == "") {
 
         alert("escreva um titulo valido para a noticia.");
-        intituloNoticia.value = "";
-        intituloNoticia.focus();
+        inTitulo.value = "";
+        inTitulo.focus();
 
     }
-    else if (inautorNoticia.value == "") {
+    else if (inAutor.value == "") {
 
         alert("escreva um autor valido para esta noticia.");
-        inautorNoticia.value = "";
-        inautorNoticia.focus();
+        inAutor.value = "";
+        inAutor.focus();
 
     }
-    else if (inconteudoNoticia.value == "") {
+    else if (inTexto.value == "") {
 
         alert("ecreva um conteudo valido para a materia.");
-        inconteudoNoticia.value = "";
-        inconteudoNoticia.focus();
+        inTexto.value = "";
+        inTexto.focus();
 
     }
     else {
 
+        var tituloAdicionado = inTitulo.value;
+        var autorAdicionado = inAutor.value;
+        var conteudoAdicionado = inTexto.value;
+
         vetTitulo.push(tituloAdicionado);
         vetAutor.push(autorAdicionado);
         vetTexto.push(conteudoAdicionado);
-
-        outMaterias.textContent = "";
 
         for (var i = 0; i < vetTitulo.length; i++) {
 
@@ -78,11 +78,9 @@ function adicionar() {
             divConteudoMateria.appendChild(h1);
             divConteudoMateria.appendChild(h3);
 
-            divConteinerMateria.appendChild(divConteudoMateria);
+            divConteinerMateria.appendChild(divConteudoMateria)
 
             outMaterias.appendChild(divConteinerMateria);
         }
-
-
     }
 }

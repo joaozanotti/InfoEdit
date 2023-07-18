@@ -43,15 +43,3 @@
 .materia-link:hover {
   color: rgb(50, 50, 150);
 }
-
-#outpainelLateral {
-  display: flex;
-  align-items: center;
-  width: auto;
-  max-width: 40%;
-  min-width: 35%;
-  padding: 1%;
-  margin: 5% auto;
-  background-color: rgba(10, 10, 65, 0.050);
-  border-bottom: 2px rgb(10, 10, 65) solid;
-}

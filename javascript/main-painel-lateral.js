@@ -19,27 +19,6 @@ inautorNoticia.style.display = "none";
 inconteudoNoticia.style.display = "none";
 btadicionar.style.display = "none";
 
-
-// excluir noticia
-
-const inPesquisaExcluir = document.getElementById("inPesquisaExcluir");
-const btPesquisaExcluir = document.getElementById("btPesquisaExcluir");
-
-
-inPesquisaExcluir.style.display = "none"
-btPesquisaExcluir.style.display = "none"
-
-// editar noticia
-
-const inPesquisaEditar = document.getElementById("inPesquisaEditar");
-const btPesquisaEditar = document.getElementById("btPesquisaEditar");
-const outMaterias = document.getElementById("outMaterias");
-const btEnviar = document.getElementById("btEnviar");
-const formEditar = document.getElementById("formEditar");
-
-formEditar.style.display = "none";
-
-
 // login
 
 function redirecionar() {
@@ -53,14 +32,7 @@ function redirecionar() {
         inconteudoNoticia.style.display = "block";
         btadicionar.style.display = "block";
 
-        // excluir noticia
-
-
-        inPesquisaExcluir.style.display = "block"
-        btPesquisaExcluir.style.display = "block"
-
-        btadicionar.addEventListener("click", adicionar);
-        btadicionar.addEventListener("click", adicionar);
+        
         btadicionar.addEventListener("click", adicionar);
 
     } else {

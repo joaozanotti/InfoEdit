@@ -1,3 +1,4 @@
+
 // adicionar noticia
 
 const intituloNoticia = document.getElementById("intituloNoticia");
@@ -5,11 +6,7 @@ const inautorNoticia = document.getElementById("inautorNoticia");
 const inconteudoNoticia = document.getElementById("inconteudoNoticia");
 const btadicionar = document.getElementById("btadicionar");
 
-intituloNoticia.style.display = "none";
-inautorNoticia.style.display = "none";
-inconteudoNoticia.style.display = "none";
-btadicionar.style.display = "none";
-
+btadicionar.addEventListener("click", adicionar);
 
 function adicionar() {
 

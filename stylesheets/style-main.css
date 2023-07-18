@@ -1,4 +1,4 @@
-.materia-conteiner{
+.materia-conteiner {
   display: flex;
   align-items: center;
   width: auto;
@@ -14,16 +14,16 @@
   width: 30%;
   height: auto;
   margin-right: 20px;
-} 
+}
 
-.materia-titulo{
+.materia-titulo {
   align-items: center;
   color: #333;
   font-size: 19px;
   margin-bottom: 5px;
 }
 
-.materia-autor{
+.materia-autor {
   width: auto;
   display: flex;
   color: rgb(0, 0, 0);
@@ -31,7 +31,7 @@
   margin-bottom: 10px;
 }
 
-.materia-link{
+.materia-link {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
@@ -40,13 +40,12 @@
   color: rgb(10, 10, 65);
 }
 
-.materia-link:hover{
+.materia-link:hover {
   color: rgb(50, 50, 150);
 }
 
-#outpainelLateral
-{
-  display: row;
+#outpainelLateral {
+  display: flex;
   align-items: center;
   width: auto;
   max-width: 40%;

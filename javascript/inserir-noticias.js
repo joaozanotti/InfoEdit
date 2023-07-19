@@ -15,21 +15,21 @@ function adicionar() {
 
     if (inTitulo.value == "") {
 
-        alert("escreva um titulo valido para a noticia.");
+        alert("Escreva um título válido para a notícia.");
         inTitulo.value = "";
         inTitulo.focus();
 
     }
     else if (inAutor.value == "") {
 
-        alert("escreva um autor valido para esta noticia.");
+        alert("Escreva um autor válido para esta notícia.");
         inAutor.value = "";
         inAutor.focus();
 
     }
     else if (inTexto.value == "") {
 
-        alert("ecreva um conteudo valido para a materia.");
+        alert("Ecreva um conteúdo válido para a matéria.");
         inTexto.value = "";
         inTexto.focus();
 

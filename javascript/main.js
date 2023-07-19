@@ -9,9 +9,6 @@ for (var i = 0; i < vetTitulo.length; i++) {
   img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
   img.className = "materia-imagem";
 
-  var divConteudoMateria = document.createElement("div");
-  divConteudoMateria.className = "materia-conteudo";
-
   var h1 = document.createElement("h1");
   h1.className = "materia-titulo";
   h1.innerHTML = vetTitulo[i];
@@ -22,10 +19,9 @@ for (var i = 0; i < vetTitulo.length; i++) {
   h3.innerHTML = vetAutor[i];
   h3.className = "materia-autor";
 
-  
   divConteinerMateria.appendChild(img);
-  divConteudoMateria.appendChild(h1);
-  divConteudoMateria.appendChild(h3);
+  divConteinerMateria.appendChild(h1);
+  divConteinerMateria.appendChild(h3);
   
   outMaterias.appendChild(divConteinerMateria);
 }
@@ -58,7 +54,6 @@ function buscarAutor() {
       var h6 = document.createElement("h6");
       h6.innerHTML = vetAutor[i];
       h6.className = "autor";
-
 
       divMateria.appendChild(imgHtml);
       divMateria.appendChild(h3);

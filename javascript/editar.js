@@ -13,26 +13,26 @@ function pesquisaEditar() {
 
     for (var i = 0; i < vetTitulo.length; i++) {
         let autorAux = vetTitulo[i].toUpperCase();
-        if (autorAux.indexOf(pesquisaTitulo) >= 0) {
-            var divMateria = document.createElement("div");
+        if (autorAux.indexOf(pesquisaTitulo) >= 0) { //Identificação da parte escrita do usuário com o vetor;
+            var divMateria = document.createElement("div"); //Caso encontre, é criado elementos no html;
             divMateria.className = "materia";
 
-            var imgHtml = document.createElement("img")
-            imgHtml.src = "../imagens/ImagensNoticias/" + vetImagens[i];
+            var imgHtml = document.createElement("img") // Expor parte da notícia (img, título e autor);
+            imgHtml.src = "../imagens/ImagensNoticias/" + vetImagens[i]; 
             imgHtml.className = "materia-imagem";
 
             var h3 = document.createElement("h3");
 
-            var link = document.createElement("a");
+            var link = document.createElement("a"); // Expor parte da notícia (img, título e autor);
             link.href = "noticia" + (i + 1) + ".html";
             link.innerHTML = vetTitulo[i];
             h3.appendChild(link);
 
-            var h6 = document.createElement("h6");
+            var h6 = document.createElement("h6"); // Expor parte da notícia (img, título e autor);
             h6.innerHTML = vetAutor[i];
             h6.className = "autor";
 
-            var button = document.createElement("input");
+            var button = document.createElement("input"); //Botão de publicar a edição;
             button.type = "button";
             button.value = "Editar";
             button.id = "btEditar" + i;
@@ -63,9 +63,9 @@ function inserirDados() {
     inAutor.value = vetAutor[idAtual];
 }
 
-btEnviar.addEventListener("click", editar);
+btEnviar.addEventListener("click", enviar);
 
-function editar() {
+function enviar() {
     if (vetTitulo[idAtual] == inTitulo.value && vetTexto[idAtual] == inTexto.value && vetAutor[idAtual] == inAutor.value) {
         alert("Realize alguma edição.");
 

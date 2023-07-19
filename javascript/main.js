@@ -44,27 +44,33 @@ function buscarAutor() {
     let autorAux = vetAutor[i].toUpperCase();
     if (autorAux.indexOf(pesquisaAutor) >= 0) {
 
-      var divMateria = document.createElement("div");
-      divMateria.className = "materia";
-
-      var imgHtml = document.createElement("img");
-      imgHtml.src = "../imagens/ImagensNoticias/" + vetImagens[i];
-      imgHtml.className = "materia-imagem";
-
+      var divConteinerMateria = document.createElement("div");
+      divConteinerMateria.className = "materia-conteiner";
+    
+      var img = document.createElement("img");
+      img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
+      img.className = "materia-imagem";
+    
+      var divConteudoMateria = document.createElement("div");
+      divConteudoMateria.className = "materia-conteudo";
+    
+      var h1 = document.createElement("h1");
+      h1.className = "materia-titulo";
+      h1.innerHTML = vetTitulo[i];
+      h1.id = "noticia" + i;
+      h1.addEventListener("click", cliqueTitulo);
+    
       var h3 = document.createElement("h3");
-      h3.innerHTML = vetTitulo[i];
-      h3.id = "noticia" + i;
-      h3.addEventListener("click", cliqueTitulo);
-
-      var h6 = document.createElement("h6");
-      h6.innerHTML = vetAutor[i];
-      h6.className = "autor";
-
-      divMateria.appendChild(imgHtml);
-      divMateria.appendChild(h3);
-      divMateria.appendChild(h6);
-
-      outMaterias.appendChild(divMateria);
+      h3.innerHTML = vetAutor[i];
+      h3.className = "materia-autor";
+    
+      divConteinerMateria.appendChild(img);
+      divConteudoMateria.appendChild(h1);
+      divConteudoMateria.appendChild(h3);
+    
+      divConteinerMateria.appendChild(divConteudoMateria);
+    
+      outMaterias.appendChild(divConteinerMateria);
     }
   }
 }

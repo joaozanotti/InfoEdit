@@ -9,45 +9,51 @@ btPesquisaEditar.addEventListener("click", pesquisaEditar);
 
 function pesquisaEditar() {
   var pesquisaTitulo = (inPesquisaEditar.value).toUpperCase();
+  formEditar.style.display = "none";
   outMaterias.innerHTML = "";
 
-    for (var i = 0; i < vetTitulo.length; i++) {
-        let autorAux = vetTitulo[i].toUpperCase();
-        if (autorAux.indexOf(pesquisaTitulo) >= 0) {
-            var divMateria = document.createElement("div");
-            divMateria.className = "materia";
+    if (inPesquisaEditar.value == "") {
+        alert("Digite o título.");
+        inPesquisaEditar.focus();
+        outMaterias.innerHTML = "";
 
-            var imgHtml = document.createElement("img")
-            imgHtml.src = "../imagens/ImagensNoticias/" + vetImagens[i];
-            imgHtml.className = "materia-imagem";
-
-            var h3 = document.createElement("h3");
-
-            var link = document.createElement("a");
-            link.href = "noticia" + (i + 1) + ".html";
-            link.innerHTML = vetTitulo[i];
-            h3.appendChild(link);
-
-            var h6 = document.createElement("h6");
-            h6.innerHTML = vetAutor[i];
-            h6.className = "autor";
-
-            var button = document.createElement("input");
-            button.type = "button";
-            button.value = "Editar";
-            button.id = "btEditar" + i;
-            button.addEventListener("click", inserirDados);
-
-            divMateria.appendChild(imgHtml);
-            divMateria.appendChild(h3);
-            divMateria.appendChild(h6);
-            divMateria.appendChild(button);
-
-            outMaterias.appendChild(divMateria);
+    } else {
+        for (var i = 0; i < vetTitulo.length; i++) {
+            let autorAux = vetTitulo[i].toUpperCase();
+            if (autorAux.indexOf(pesquisaTitulo) >= 0) {
+                var divMateria = document.createElement("div");
+                divMateria.className = "materia";
+    
+                var imgHtml = document.createElement("img")
+                imgHtml.src = "../imagens/ImagensNoticias/" + vetImagens[i];
+                imgHtml.className = "materia-imagem";
+    
+                var h3 = document.createElement("h3");
+                h3.innerHTML = vetTitulo[i];
+                h3.id = "noticia" + i;
+                h3.addEventListener("click", cliqueTitulo);
+    
+                var h6 = document.createElement("h6");
+                h6.innerHTML = vetAutor[i];
+                h6.className = "autor";
+    
+                var button = document.createElement("input");
+                button.type = "button";
+                button.value = "Editar";
+                button.id = "btEditar" + i;
+                button.addEventListener("click", inserirDados);
+    
+                divMateria.appendChild(imgHtml);
+                divMateria.appendChild(h3);
+                divMateria.appendChild(h6);
+                divMateria.appendChild(button);
+    
+                outMaterias.appendChild(divMateria);
+            }
         }
-    }
-    if (outMaterias.innerHTML == "") {
-        outMaterias.innerHTML = "Nenhuma matéria encontrada.";
+        if (outMaterias.innerHTML == "") {
+            outMaterias.innerHTML = "Nenhuma matéria encontrada.";
+        }
     }
 }
 
@@ -80,4 +86,43 @@ function editar() {
         inPesquisaEditar.value = "";
         outMaterias.innerHTML = "Notícia alterada com sucesso!";
     }
+}
+
+function cliqueTitulo() {
+    outMaterias.innerHTML = "";
+    formEditar.style.display = "none";
+
+    var idClicado = this.id;
+    var idAtual = idClicado.substring(7);
+
+    var divMateria = document.createElement("div");
+    divMateria.className = "materia";
+
+    var h3 = document.createElement("h3");
+    h3.innerHTML = vetTitulo[idAtual];
+
+    var img = document.createElement("img");
+    img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
+    img.className = "materia-imagem";
+
+    var texto = document.createElement("article");
+    texto.innerHTML = vetTexto[idAtual];
+
+    var h6 = document.createElement("h6");
+    h6.innerHTML = vetAutor[idAtual];
+    h6.className = "autor";
+
+    var button = document.createElement("input");
+    button.type = "button";
+    button.value = "Editar";
+    button.id = "btEditar" + idAtual;
+    button.addEventListener("click", inserirDados);
+
+    divMateria.appendChild(h3);
+    divMateria.appendChild(img);
+    divMateria.appendChild(texto);
+    divMateria.appendChild(h6);
+    divMateria.appendChild(button);
+
+    outMaterias.appendChild(divMateria);
 }

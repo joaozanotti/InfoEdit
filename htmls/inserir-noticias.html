@@ -7,7 +7,8 @@
     <title>Inserir Notícias - INFOEDIT</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
-    <link rel="stylesheet" href="../stylesheets/editar-inserir.css">
+    <link rel="stylesheet" href="../stylesheets/formulario.css">
+    <link rel="stylesheet" href="../stylesheets/style-main.css">
 </head>
 
 <body>
@@ -40,16 +41,22 @@
             <div class="form-group">
                 <label for="autor">Autor da Matéria:</label>
                 <input type="text" id="inAutor" name="autor" required>
+                <input type="button" id="btadicionar">
             </div>
-
-            <input type="submit" value="Enviar">
         </form>
+
+        <div id="outMaterias"></div>
+
     </main>
     <!-- Rodapé comum do site -->
     <footer>
         <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
         <p id="copyright">&copy; Copyright INFOEDIT</p>
     </footer>
+
+    <script src="../javascript/vetores.js"></script>
+    <script src="../javascript/adicionar.js"></script>
+
 </body>
 
 </html>

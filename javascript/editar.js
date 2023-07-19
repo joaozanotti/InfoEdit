@@ -14,39 +14,41 @@ function pesquisaEditar() {
     for (var i = 0; i < vetTitulo.length; i++) {
         let autorAux = vetTitulo[i].toUpperCase();
         if (autorAux.indexOf(pesquisaTitulo) >= 0) { //Identificação da parte escrita do usuário com o vetor;
-            var divMateria = document.createElement("div"); //Caso encontre, é criado elementos no html;
+            var divMateria = document.createElement("div"); //Caso encontre, é criado elementos no html para alojar o conteúdo;
             divMateria.className = "materia";
 
-            var imgHtml = document.createElement("img") // Expor parte da notícia (img, título e autor);
+            var imgHtml = document.createElement("img") // Inserindo imagem;
             imgHtml.src = "../imagens/ImagensNoticias/" + vetImagens[i]; 
             imgHtml.className = "materia-imagem";
 
-            var h3 = document.createElement("h3");
+            var h3 = document.createElement("h3"); //Tag para o título;
 
             var link = document.createElement("a"); // Expor parte da notícia (img, título e autor);
             link.href = "noticia" + (i + 1) + ".html";
             link.innerHTML = vetTitulo[i];
-            h3.appendChild(link);
+            h3.appendChild(link); //Inserindo título;
 
-            var h6 = document.createElement("h6"); // Expor parte da notícia (img, título e autor);
+            var h6 = document.createElement("h6"); // Inserindo autor;
             h6.innerHTML = vetAutor[i];
             h6.className = "autor";
 
             var button = document.createElement("input"); //Botão de publicar a edição;
             button.type = "button";
             button.value = "Editar";
-            button.id = "btEditar" + i;
-            button.addEventListener("click", inserirDados);
+            button.id = "btEditar" + i; // adiciona i para saber em que conteúdo do vetor irá mostrar;
+            button.addEventListener("click", inserirDados); // Adicionando evento no botão (clicar);
 
-            divMateria.appendChild(imgHtml);
+            // Colocando partes de uma notícia na mesma caixa;
+            divMateria.appendChild(imgHtml); 
             divMateria.appendChild(h3);
             divMateria.appendChild(h6);
             divMateria.appendChild(button);
 
+            // Expor notícia (img+título+autor);
             outMaterias.appendChild(divMateria);
         }
     }
-    if (outMaterias.innerHTML == "") {
+    if (outMaterias.innerHTML == "") { //Caso a notícia/parte da notícia procurada não está no vetor;
         outMaterias.innerHTML = "Nenhuma matéria encontrada.";
     }
 }

@@ -18,9 +18,13 @@
 
 .materia-titulo {
   align-items: center;
-  color: #333;
+  color: rgb(10, 10, 65);
   font-size: 19px;
   margin-bottom: 5px;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1.5;
 }
 
 .materia-autor {
@@ -31,15 +35,6 @@
   margin-bottom: 10px;
 }
 
-.materia-link {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: 1.5;
-  cursor: pointer;
-  color: rgb(10, 10, 65);
-}
-
-.materia-link:hover {
+.materia-titulo:hover {
   color: rgb(50, 50, 150);
 }

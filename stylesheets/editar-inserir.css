@@ -4,6 +4,7 @@
 main {
     text-align: center;
     font-family: 'Aleo', sans-serif;
+    height: 1000px;
 }
 
 .form-group {

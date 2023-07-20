@@ -6,6 +6,10 @@ main {
     font-family: 'Aleo', sans-serif;
 }
 
+.materia-container {
+    text-align: start;
+}
+
 .form-group {
     margin-bottom: 20px;
 }

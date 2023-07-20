@@ -1,15 +1,17 @@
+//Referenciando o html;
 const inPesquisaEditar = document.getElementById("inPesquisaEditar");
 const btPesquisaEditar = document.getElementById("btPesquisaEditar");
 const outMaterias = document.getElementById("outMaterias");
 const btEnviar = document.getElementById("btEnviar");
 const formEditar = document.getElementById("formEditar");
 formEditar.style.display = "none";
-
+//Adicionando evento no botão de pesquisa de notícias na página de edição;
 btPesquisaEditar.addEventListener("click", pesquisaEditar);
 
 function pesquisaEditar() {
-  var pesquisaTitulo = (inPesquisaEditar.value).toUpperCase();
-  outMaterias.innerHTML = "";
+
+  var pesquisaTitulo = (inPesquisaEditar.value).toUpperCase(); //Transformando toda a entrada do input em maiúsculo;
+  outMaterias.innerHTML = ""; //Saída de informações;
 
     for (var i = 0; i < vetTitulo.length; i++) {
         let autorAux = vetTitulo[i].toUpperCase();

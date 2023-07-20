@@ -15,7 +15,6 @@
     margin: 20px;
     height: 30px;
     font-size: 15px;
-
 }
 
 .login input[type="button"] {
@@ -24,12 +23,11 @@
     font-size: 15px;
     margin: 15px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 8px;
     color: black;
     background-color: white;
     
 }
-
 .login h1 {
     font-size: 1.8em;
     margin: 15px;

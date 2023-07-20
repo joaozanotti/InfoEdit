@@ -2,6 +2,10 @@ main {
     text-align: center;
 }
 
+.materia-container {
+    text-align: start;
+}
+
 .form-group {
     margin-bottom: 20px;
 }

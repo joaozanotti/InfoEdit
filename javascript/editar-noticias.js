@@ -21,21 +21,25 @@ function pesquisaEditar() {
         for (var i = 0; i < vetTitulo.length; i++) {
             let autorAux = vetTitulo[i].toUpperCase();
             if (autorAux.indexOf(pesquisaTitulo) >= 0) {
-                var divMateria = document.createElement("div");
-                divMateria.className = "materia";
+                var divContainerMateria = document.createElement("div");
+                divContainerMateria.className = "materia-container";
     
-                var imgHtml = document.createElement("img")
-                imgHtml.src = "../imagens/ImagensNoticias/" + vetImagens[i];
-                imgHtml.className = "materia-imagem";
+                var img = document.createElement("img")
+                img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
+                img.className = "materia-imagem";
+
+                var divConteudoMateria = document.createElement("div");
+                divConteudoMateria.className = "materia-conteudo";
+    
+                var h1 = document.createElement("h1");
+                h1.className = "materia-titulo";
+                h1.innerHTML = vetTitulo[i];
+                h1.id = "noticia" + i;
+                h1.addEventListener("click", cliqueTitulo);
     
                 var h3 = document.createElement("h3");
-                h3.innerHTML = vetTitulo[i];
-                h3.id = "noticia" + i;
-                h3.addEventListener("click", cliqueTitulo);
-    
-                var h6 = document.createElement("h6");
-                h6.innerHTML = vetAutor[i];
-                h6.className = "autor";
+                h3.innerHTML = vetAutor[i];
+                h3.className = "materia-autor";
     
                 var button = document.createElement("input");
                 button.type = "button";
@@ -43,18 +47,59 @@ function pesquisaEditar() {
                 button.id = "btEditar" + i;
                 button.addEventListener("click", inserirDados);
     
-                divMateria.appendChild(imgHtml);
-                divMateria.appendChild(h3);
-                divMateria.appendChild(h6);
-                divMateria.appendChild(button);
+                divContainerMateria.appendChild(img);
+                divConteudoMateria.appendChild(h1);
+                divConteudoMateria.appendChild(h3);
+                divConteudoMateria.appendChild(button);
+
+                divContainerMateria.appendChild(divConteudoMateria);
     
-                outMaterias.appendChild(divMateria);
+                outMaterias.appendChild(divContainerMateria);
             }
         }
         if (outMaterias.innerHTML == "") {
             outMaterias.innerHTML = "Nenhuma matéria encontrada.";
         }
     }
+}
+
+function cliqueTitulo() {
+    outMaterias.innerHTML = "";
+    formEditar.style.display = "none";
+
+    var idClicado = this.id;
+    var idAtual = idClicado.substring(7);
+
+    var divMateria = document.createElement("div");
+    divMateria.className = "";
+
+    var h3 = document.createElement("h3");
+    h3.innerHTML = vetTitulo[idAtual];
+
+    var img = document.createElement("img");
+    img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
+    img.className = "";
+
+    var texto = document.createElement("article");
+    texto.innerHTML = vetTexto[idAtual];
+
+    var h6 = document.createElement("h6");
+    h6.innerHTML = vetAutor[idAtual];
+    h6.className = "";
+
+    var button = document.createElement("input");
+    button.type = "button";
+    button.value = "Editar";
+    button.id = "btEditar" + idAtual;
+    button.addEventListener("click", inserirDados);
+
+    divMateria.appendChild(h3);
+    divMateria.appendChild(img);
+    divMateria.appendChild(texto);
+    divMateria.appendChild(h6);
+    divMateria.appendChild(button);
+
+    outMaterias.appendChild(divMateria);
 }
 
 var idAtual;
@@ -86,43 +131,4 @@ function editar() {
         inPesquisaEditar.value = "";
         outMaterias.innerHTML = "Notícia alterada com sucesso!";
     }
-}
-
-function cliqueTitulo() {
-    outMaterias.innerHTML = "";
-    formEditar.style.display = "none";
-
-    var idClicado = this.id;
-    var idAtual = idClicado.substring(7);
-
-    var divMateria = document.createElement("div");
-    divMateria.className = "materia";
-
-    var h3 = document.createElement("h3");
-    h3.innerHTML = vetTitulo[idAtual];
-
-    var img = document.createElement("img");
-    img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
-    img.className = "materia-imagem";
-
-    var texto = document.createElement("article");
-    texto.innerHTML = vetTexto[idAtual];
-
-    var h6 = document.createElement("h6");
-    h6.innerHTML = vetAutor[idAtual];
-    h6.className = "autor";
-
-    var button = document.createElement("input");
-    button.type = "button";
-    button.value = "Editar";
-    button.id = "btEditar" + idAtual;
-    button.addEventListener("click", inserirDados);
-
-    divMateria.appendChild(h3);
-    divMateria.appendChild(img);
-    divMateria.appendChild(texto);
-    divMateria.appendChild(h6);
-    divMateria.appendChild(button);
-
-    outMaterias.appendChild(divMateria);
 }

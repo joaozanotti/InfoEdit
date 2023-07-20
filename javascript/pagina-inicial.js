@@ -2,8 +2,8 @@ const outMaterias = document.getElementById("outMaterias");
 
 for (var i = 0; i < vetTitulo.length; i++) {
 
-  var divConteinerMateria = document.createElement("div");
-  divConteinerMateria.className = "materia-conteiner";
+  var divContainerMateria = document.createElement("div");
+  divContainerMateria.className = "materia-container";
 
   var img = document.createElement("img");
   img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
@@ -22,13 +22,13 @@ for (var i = 0; i < vetTitulo.length; i++) {
   h3.innerHTML = vetAutor[i];
   h3.className = "materia-autor";
 
-  divConteinerMateria.appendChild(img);
+  divContainerMateria.appendChild(img);
   divConteudoMateria.appendChild(h1);
   divConteudoMateria.appendChild(h3);
 
-  divConteinerMateria.appendChild(divConteudoMateria);
+  divContainerMateria.appendChild(divConteudoMateria);
 
-  outMaterias.appendChild(divConteinerMateria);
+  outMaterias.appendChild(divContainerMateria);
 }
 
 const inBuscaAutor = document.getElementById("inBuscaAutor");
@@ -45,7 +45,7 @@ function buscarAutor() {
     if (autorAux.indexOf(pesquisaAutor) >= 0) {
 
       var divConteinerMateria = document.createElement("div");
-      divConteinerMateria.className = "materia-conteiner";
+      divConteinerMateria.className = "materia-container";
     
       var img = document.createElement("img");
       img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
@@ -82,21 +82,21 @@ function cliqueTitulo() {
     var idAtual = idClicado.substring(7);
 
     var divMateria = document.createElement("div");
-    divMateria.className = "materia";
+    divMateria.className = "";
 
     var h3 = document.createElement("h3");
     h3.innerHTML = vetTitulo[idAtual];
 
     var img = document.createElement("img");
     img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
-    img.className = "materia-imagem";
+    img.className = "";
 
     var texto = document.createElement("article");
     texto.innerHTML = vetTexto[idAtual];
 
     var h6 = document.createElement("h6");
     h6.innerHTML = vetAutor[idAtual];
-    h6.className = "autor";
+    h6.className = "";
 
     divMateria.appendChild(h3);
     divMateria.appendChild(img);

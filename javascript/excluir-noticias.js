@@ -14,7 +14,7 @@ function pesquisar() {
             var divContainerMateria = document.createElement("div");
             divContainerMateria.className = "materia-container";
 
-            var img = document.createElement("img")
+            var img = document.createElement("img");
             img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
             img.className = "materia-imagem";
 
@@ -68,7 +68,7 @@ function cliqueTitulo() {
 
     var texto = document.createElement("article");
     texto.innerHTML = vetTexto[idAtual];
-    texto.className = "noticia-texto"
+    texto.className = "noticia-texto";
 
     var h3 = document.createElement("h3");
     h3.innerHTML = vetAutor[idAtual];

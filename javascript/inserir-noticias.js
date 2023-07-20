@@ -85,7 +85,7 @@ function cliqueTitulo() {
 
     var texto = document.createElement("article");
     texto.innerHTML = vetTexto[idAtual];
-    texto.className = "noticia-texto"
+    texto.className = "noticia-texto";
 
     var h3 = document.createElement("h3");
     h3.innerHTML = vetAutor[idAtual];

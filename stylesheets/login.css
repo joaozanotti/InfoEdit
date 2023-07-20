@@ -1,29 +1,39 @@
 .login {
     border: 3px solid #000;
     border-radius: 10px;
-    background-color: #ebeaea;
-    width: 25%;
+    background-color: #1b3852;
+    width: 360px;
+    color: white;
     margin: 0 auto;
+    padding: 15px;
     text-align: center;
-    padding: 10px;
     font-size: 20px;
-    margin: auto;
 }
 
 .login input[type="number"] {
-    width: 40%;
-    margin-bottom: 20px;
+    width: 20px;
+    margin: 20px;
     height: 30px;
     font-size: 15px;
+
 }
 
 .login input[type="button"] {
-    width: 20%;
+    width: 80px;
     height: 40px;
     font-size: 15px;
-    margin-bottom: 15px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    
 }
 
 .login h1 {
     font-size: 1.8em;
+    margin: 15px;
+}
+.espacoLogin{
+    padding: 50px;
 }

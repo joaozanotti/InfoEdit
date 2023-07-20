@@ -82,26 +82,28 @@ function cliqueTitulo() {
     var idAtual = idClicado.substring(7);
 
     var divMateria = document.createElement("div");
-    divMateria.className = "";
+    divMateria.className = "noticia-container";
 
-    var h3 = document.createElement("h3");
-    h3.innerHTML = vetTitulo[idAtual];
+    var h1 = document.createElement("h1");
+    h1.innerHTML = vetTitulo[idAtual];
+    h1.className = "noticia-titulo";
 
     var img = document.createElement("img");
     img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
-    img.className = "";
+    img.className = "noticia-imagem";
 
     var texto = document.createElement("article");
     texto.innerHTML = vetTexto[idAtual];
+    texto.className = "noticia-texto"
 
-    var h6 = document.createElement("h6");
-    h6.innerHTML = vetAutor[idAtual];
-    h6.className = "";
+    var h3 = document.createElement("h3");
+    h3.innerHTML = vetAutor[idAtual];
+    h3.className = "noticia-autor";
 
-    divMateria.appendChild(h3);
+    divMateria.appendChild(h1);
     divMateria.appendChild(img);
     divMateria.appendChild(texto);
-    divMateria.appendChild(h6);
+    divMateria.appendChild(h3);
 
     outMaterias.appendChild(divMateria);
 }

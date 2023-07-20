@@ -19,6 +19,10 @@ main {
     font-size: 22px;
     margin-bottom: 20px;
 }
+#pPesquisaExcluir{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
 #inPesquisaEditar{
     font-family: 'Aleo', sans-serif;
     font-size: 18px;
@@ -27,7 +31,57 @@ main {
     margin-bottom: 20px;
     border: black solid;
 }
-#btPesquisaEditar{
+#inPesquisaExcluir{
+    font-family: 'Aleo', sans-serif;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: black solid;
+}
+#inTitulo{
+    font-family: 'Aleo', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: black solid;
+}
+#inTexto{
+    font-family: 'Aleo', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: black solid;
+}
+#inAutor{
+    font-family: 'Aleo', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: black solid;
+}
+#btAdicionar{
+    font-family: 'Aleo', sans-serif;
+    font-size: 18px;
+    background-color: rgb(13, 13, 69);
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+#btPesquisaExcluir{
+    font-family: 'Aleo', sans-serif;
+    font-size: 18px;
+    background-color: rgb(13, 13, 69);
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+#btPesquisaEditar {
     font-family: 'Aleo', sans-serif;
     font-size: 18px;
     background-color: rgb(13, 13, 69);

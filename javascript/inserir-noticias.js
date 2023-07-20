@@ -7,33 +7,26 @@ const outMaterias = document.getElementById("outMaterias");
 
 btAdicionar.addEventListener("click", adicionar);
 
+var indice;
 function adicionar() {
-
     outMaterias.textContent = "";
 
     if (inTitulo.value == "") {
-
         alert("Escreva um título válido para a notícia.");
         inTitulo.value = "";
         inTitulo.focus();
 
-    }
-    else if (inAutor.value == "") {
-
+    } else if (inAutor.value == "") {
         alert("Escreva um autor válido para esta notícia.");
         inAutor.value = "";
         inAutor.focus();
 
-    }
-    else if (inTexto.value == "") {
-
+    } else if (inTexto.value == "") {
         alert("Ecreva um conteúdo válido para a matéria.");
         inTexto.value = "";
         inTexto.focus();
 
-    }
-    else {
-
+    } else {
         var tituloAdicionado = inTitulo.value;
         var autorAdicionado = inAutor.value;
         var conteudoAdicionado = inTexto.value;
@@ -42,36 +35,34 @@ function adicionar() {
         vetAutor.push(autorAdicionado);
         vetTexto.push(conteudoAdicionado);
 
-        for (var i = 0; i < vetTitulo.length; i++) {
+        indice = vetTitulo.length - 1;
+        var divContainerMateria = document.createElement("div");
+        divContainerMateria.className = "materia-container";
 
-            var divContainerMateria = document.createElement("div");
-            divContainerMateria.className = "materia-container";
+        var img = document.createElement("img");
+        img.src = "../imagens/ImagensNoticias/" + vetImagens[indice];
+        img.className = "materia-imagem";
 
-            var img = document.createElement("img");
-            img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
-            img.className = "materia-imagem";
+        var divConteudoMateria = document.createElement("div");
+        divConteudoMateria.className = "materia-conteudo";
 
-            var divConteudoMateria = document.createElement("div");
-            divConteudoMateria.className = "materia-conteudo";
+        var h1 = document.createElement("h1");
+        h1.className = "materia-titulo";
+        h1.innerHTML = vetTitulo[indice];
+        h1.id = "noticia" + indice;
+        h1.addEventListener("click", cliqueTitulo);
 
-            var h1 = document.createElement("h1");
-            h1.className = "materia-titulo";
-            h1.innerHTML = vetTitulo[i];
-            h1.id = "noticia" + i;
-            h1.addEventListener("click", cliqueTitulo);
+        var h3 = document.createElement("h3");
+        h3.innerHTML = vetAutor[indice];
+        h3.className = "materia-autor";
 
-            var h3 = document.createElement("h3");
-            h3.innerHTML = vetAutor[i];
-            h3.className = "materia-autor";
+        divContainerMateria.appendChild(img);
+        divConteudoMateria.appendChild(h1);
+        divConteudoMateria.appendChild(h3);
 
-            divContainerMateria.appendChild(img);
-            divConteudoMateria.appendChild(h1);
-            divConteudoMateria.appendChild(h3);
+        divContainerMateria.appendChild(divConteudoMateria);
 
-            divContainerMateria.appendChild(divConteudoMateria);
-
-            outMaterias.appendChild(divContainerMateria);
-        }
+        outMaterias.appendChild(divContainerMateria);
     }
 }
 
@@ -82,26 +73,28 @@ function cliqueTitulo() {
     var idAtual = idClicado.substring(7);
 
     var divMateria = document.createElement("div");
-    divMateria.className = "";
+    divMateria.className = "noticia-container";
 
-    var h3 = document.createElement("h3");
-    h3.innerHTML = vetTitulo[idAtual];
+    var h1 = document.createElement("h1");
+    h1.innerHTML = vetTitulo[idAtual];
+    h1.className = "noticia-titulo";
 
     var img = document.createElement("img");
     img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
-    img.className = "";
+    img.className = "noticia-imagem";
 
     var texto = document.createElement("article");
     texto.innerHTML = vetTexto[idAtual];
+    texto.className = "noticia-texto"
 
-    var h6 = document.createElement("h6");
-    h6.innerHTML = vetAutor[idAtual];
-    h6.className = "";
+    var h3 = document.createElement("h3");
+    h3.innerHTML = vetAutor[idAtual];
+    h3.className = "noticia-autor";
 
-    divMateria.appendChild(h3);
+    divMateria.appendChild(h1);
     divMateria.appendChild(img);
     divMateria.appendChild(texto);
-    divMateria.appendChild(h6);
+    divMateria.appendChild(h3);
 
     outMaterias.appendChild(divMateria);
 }

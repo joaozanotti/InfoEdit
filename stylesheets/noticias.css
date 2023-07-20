@@ -1,22 +1,27 @@
-.noticia img {
+.noticia-imagem {
     width: 50%;
     margin: 1em 0;
 }
 
-.noticia h1 {
+.noticia-titulo {
     font-size: 2.5em;
     text-transform: uppercase;
 }
 
-.noticia {
+.noticia-container {
     text-align: center;
     width: 70%;
     margin: 0 auto;
     padding: 2em;
 }
 
-.noticia article {
+.noticia-texto {
     text-align: justify;
     margin: 20px 0;
     font-size: 20px;
+}
+
+.noticia-autor {
+    font-size: 1.2em;
+    text-align: end;
 }

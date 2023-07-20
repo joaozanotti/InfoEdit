@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,27 @@
     <link rel="stylesheet" href="../stylesheets/login.css">
     <title>Login - INFOEDIT</title>
 </head>
+
 <body>
     <!--Cabeçalho comum do site-->
     <header>
         <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
         <nav>
             <ul>
-                <li><a class="opcoesCabecalho" href="página-inicial.html">INÍCIO</a></li>
+                <li><a class="opcoesCabecalho" href="pagina-inicial.html">INÍCIO</a></li>
                 <li><a class="opcoesCabecalho" href="login.html">LOGIN</a></li>
             </ul>
         </nav>
     </header>
     <!-- Corpo da págima inicial do site -->
-    <main>
+    <main class="espacoLogin">
         <div class="login">
-            <h1>Login</h1>
-            <div>Senha: <input type="number" id="inSenha"></div>
-            <div><input type="button" value="Entrar" id="btLogin"></div>
+            <h1 id="tituloLogin">LOGIN</h1>
+            <div id="senha">Senha:
+                <input class="inputSenha" type="password" id="inSenha">
+            </div>
+            <input class="btLogin" type="button" value="Entrar" id="btLogin">
+            <img class="logoLogin" src="../imagens/ImagensHeaderFooter/logoAzul.png" alt="">
         </div>
     </main>
     <!-- Rodapé comum do site -->
@@ -34,4 +39,5 @@
     </footer>
     <script src="../javascript/login.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,11 @@
-.materia-conteiner {
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+main {
+    height: 1000px;
+    font-family: 'Aleo', sans-serif;
+}
+
+.materia-container {
   display: flex;
   align-items: center;
   width: auto;
@@ -18,9 +25,13 @@
 
 .materia-titulo {
   align-items: center;
-  color: #333;
+  color: rgb(10, 10, 65);
   font-size: 19px;
   margin-bottom: 5px;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1.5;
 }
 
 .materia-autor {
@@ -31,15 +42,6 @@
   margin-bottom: 10px;
 }
 
-.materia-link {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: 1.5;
-  cursor: pointer;
-  color: rgb(10, 10, 65);
-}
-
-.materia-link:hover {
+.materia-titulo:hover {
   color: rgb(50, 50, 150);
 }

@@ -7,8 +7,9 @@
     <title>Inserir Notícias - INFOEDIT</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
-    <link rel="stylesheet" href="../stylesheets/formulario.css">
-    <link rel="stylesheet" href="../stylesheets/style-main.css">
+    <link rel="stylesheet" href="../stylesheets/editar-inserir.css">
+    <link rel="stylesheet" href="../stylesheets/pagina-inicial.css">
+    <link rel="stylesheet" href="../stylesheets/noticias.css">
 </head>
 
 <body>
@@ -17,17 +18,17 @@
         <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
         <nav>
             <ul>
-                <li><a class="opcoesCabecalho" href="página-inicial.html">INÍCIO</a></li>
+                <li><a class="opcoesCabecalho" href="pagina-inicial.html">INÍCIO</a></li>
                 <li><a class="opcoesCabecalho" href="inserir-noticias.html">INSERIR</a></li>
                 <li><a class="opcoesCabecalho" href="editar-noticias.html">EDITAR</a></li>
                 <li><a class="opcoesCabecalho" href="excluir-noticias.html">EXCLUIR</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Corpo da págima inicial do site -->
+    <!-- Corpo da página inicial do site -->
     <main>
-        <h1>Insira uma Noticia</h1>
-        <form action="processar_formulario.php" method="POST">
+        <h1 class="titulo">INSIRA UMA NOTÍCIA</h1>
+        <form>
             <div class="form-group">
                 <label for="nome">Título da Matéria:</label>
                 <input type="text" id="inTitulo" name="nome" required>
@@ -41,7 +42,7 @@
             <div class="form-group">
                 <label for="autor">Autor da Matéria:</label>
                 <input type="text" id="inAutor" name="autor" required>
-                <input type="button" id="btadicionar">
+                <input type="button" id="btAdicionar" value="Incluir">
             </div>
         </form>
 
@@ -55,8 +56,7 @@
     </footer>
 
     <script src="../javascript/vetores.js"></script>
-    <script src="../javascript/adicionar.js"></script>
+    <script src="../javascript/inserir-noticias.js"></script>
 
 </body>
-
 </html>

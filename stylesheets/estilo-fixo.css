@@ -1,4 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+header, footer{
+   font-family: 'Aleo', sans-serif;
+}
 /* HEADER-------------------------------------------------------------------------------------------- */
 
 #logoHeader {
@@ -22,17 +25,20 @@ ul {
 .opcoesCabecalho {
    color: white;
    display: inline;
+   border-radius: 8px;
    margin-right: 50px;
    font-weight: bold;
    text-decoration: none;
    font-size: 20px;
    cursor: pointer;
    padding: 8px;
+   border: 2px rgba(255, 255, 255, 0) solid;
 }
 
 #campoPesquisa {
    border-radius: 8px;
    background-color: white;
+   
 }
 
 #inBuscaAutor {

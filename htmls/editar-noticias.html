@@ -7,8 +7,9 @@
     <title>Editar Notícias - INFOEDIT</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
-    <link rel="stylesheet" href="../stylesheets/formulario.css">
-    <link rel="stylesheet" href="../stylesheets/style-main.css">
+    <link rel="stylesheet" href="../stylesheets/editar-inserir.css">
+    <link rel="stylesheet" href="../stylesheets/pagina-inicial.css">
+    <link rel="stylesheet" href="../stylesheets/noticias.css">
 </head>
 
 <body>
@@ -17,18 +18,23 @@
         <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
         <nav>
             <ul>
-                <li><a class="opcoesCabecalho" href="página-inicial.html">INÍCIO</a></li>
+                <li><a class="opcoesCabecalho" href="pagina-inicial.html">INÍCIO</a></li>
                 <li><a class="opcoesCabecalho" href="inserir-noticias.html">INSERIR</a></li>
                 <li><a class="opcoesCabecalho" href="editar-noticias.html">EDITAR</a></li>
                 <li><a class="opcoesCabecalho" href="excluir-noticias.html">EXCLUIR</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Corpo da págima inicial do site -->
+    <!-- Corpo da página inicial do site -->
     <main>
-        <h1>Edite uma Notícia</h1>
-        <p>Pesquisar notícia: <input type="search" id="inPesquisaEditar"></p>
-        <p><input type="button" value="Pesquisar" id="btPesquisaEditar"></p>
+        <h1 class="titulo">EDITE UMA NOTÍCIA</h1>
+
+        <p id="pPesquisaEditar">Pesquisar notícia:
+        </p>
+        <input type="search" id="inPesquisaEditar">
+        <p>
+            <input type="button" value="Pesquisar" id="btPesquisaEditar">
+        </p>
         <div id="outMaterias"></div>
 
         <form id="formEditar">
@@ -39,7 +45,7 @@
 
             <div class="form-group">
                 <label for="inTexto">Texto da Matéria:</label>
-                <textarea type="text" id="inTexto" rows="10" required></textarea>
+                <textarea type="text" id="inTexto" rows="12" required></textarea>
             </div>
 
             <div class="form-group">
@@ -49,7 +55,6 @@
 
             <input type="button" value="Enviar" id="btEnviar">
         </form>
-        <h3></h3>
     </main>
     <!-- Rodapé comum do site -->
     <footer>
@@ -57,7 +62,7 @@
         <p id="copyright">&copy; Copyright INFOEDIT</p>
     </footer>
     <script src="../javascript/vetores.js"></script>
-    <script src="../javascript/editar.js"></script>
+    <script src="../javascript/editar-noticias.js"></script>
 </body>
 
 </html>

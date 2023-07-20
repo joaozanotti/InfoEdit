@@ -55,11 +55,12 @@ function pesquisaEditar() {
 
 var idAtual;
 
-function inserirDados() {
+function inserirDados() { //Função para editar notícia clicada;
     var idClicado = this.id;
-    idAtual = idClicado.substring(8);
+    idAtual = idClicado.substring(8); //Vetor do botão em: "btEditar" + i;
 
     formEditar.style.display = "block";
+    //Colocar o conteúdo de uma notícia nos campos de editar - abre campo de edição;
     inTitulo.value = vetTitulo[idAtual];
     inTexto.value = vetTexto[idAtual];
     inAutor.value = vetAutor[idAtual];
@@ -68,6 +69,7 @@ function inserirDados() {
 btEnviar.addEventListener("click", enviar);
 
 function enviar() {
+    //Verificação se foi alterado algo ou não no campo de edição;
     if (vetTitulo[idAtual] == inTitulo.value && vetTexto[idAtual] == inTexto.value && vetAutor[idAtual] == inAutor.value) {
         alert("Realize alguma edição.");
 
@@ -75,6 +77,7 @@ function enviar() {
         alert("Os dados não podem ser vazios.");
 
     } else {
+        //Após as verificações, concluir a alteração do usuário;
         vetTitulo[idAtual] = inTitulo.value;
         vetTexto[idAtual] = inTexto.value;
         vetAutor[idAtual] = inAutor.value;

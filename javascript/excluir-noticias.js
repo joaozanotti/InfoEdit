@@ -51,7 +51,6 @@ function pesquisar() {
 
 function cliqueTitulo() {
     outMaterias.innerHTML = "";
-    formEditar.style.display = "none";
 
     var idClicado = this.id;
     var idAtual = idClicado.substring(7);

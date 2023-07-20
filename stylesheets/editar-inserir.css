@@ -6,7 +6,12 @@ main {
     font-family: 'Aleo', sans-serif;
     height: 1800px;
 }
-h1{
+
+.materia-container {
+    text-align: start;
+}
+
+.titulo {
     margin: 50px 0px 30px 0px;
     font-size: 32px;
     font-weight: bold;

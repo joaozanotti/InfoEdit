@@ -3,10 +3,11 @@ const btPesquisaExcluir = document.getElementById("btPesquisaExcluir");
 const outMaterias = document.getElementById("outMaterias");
 const btExcluir = document.getElementById("btExcluir");
 
+//CRIANDO BOTAO PARA ACESSO DA FUNCION DE PESQUISAR;
 btPesquisaExcluir.addEventListener("click", pesquisar);
 
 function pesquisar() {
-  var pesquisaTitulo = (inPesquisaExcluir.value).toUpperCase();
+  var pesquisaTitulo = (inPesquisaExcluir.value).toUpperCase();// TRANSFORMANDO TUDO EM MAIÚSCULO
   outMaterias.innerHTML = "";
     for (var i = 0; i < vetTitulo.length; i++) {
         let autorAux = vetTitulo[i].toUpperCase();
@@ -14,19 +15,23 @@ function pesquisar() {
             var divContainerMateria = document.createElement("div");
             divContainerMateria.className = "materia-container";
 
+            //EXIBINDO AS IMAGENS DAS NOTICIAS;
             var img = document.createElement("img");
             img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
             img.className = "materia-imagem";
 
+            //CRIANDO DIVS PARA ESTILIZAÇÃO
             var divConteudoMateria = document.createElement("div");
             divConteudoMateria.className = "materia-conteudo";
-
+            
+            //MOSTRANDO OS TITULOS DA MATERIA;
             var titulo = document.createElement("h1");
             titulo.className = "materia-titulo";
             titulo.innerHTML = vetTitulo[i];
             titulo.id = "noticia" + i;
             titulo.addEventListener("click", cliqueTitulo);
 
+            //MOSTRANDO NOME DO AUTOR;
             var autor = document.createElement("h3");
             autor.innerHTML = vetAutor[i];
             autor.className = "materia-autor";

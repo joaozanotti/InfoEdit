@@ -12,19 +12,19 @@ for (var i = 0; i < vetTitulo.length; i++) {
   var divConteudoMateria = document.createElement("div");
   divConteudoMateria.className = "materia-conteudo";
 
-  var h1 = document.createElement("h1");
-  h1.className = "materia-titulo";
-  h1.innerHTML = vetTitulo[i];
-  h1.id = "noticia" + i;
-  h1.addEventListener("click", cliqueTitulo);
+  var titulo = document.createElement("h1");
+  titulo.className = "materia-titulo";
+  titulo.innerHTML = vetTitulo[i];
+  titulo.id = "noticia" + i;
+  titulo.addEventListener("click", cliqueTitulo);
 
-  var h3 = document.createElement("h3");
-  h3.innerHTML = vetAutor[i];
-  h3.className = "materia-autor";
+  var autor = document.createElement("h3");
+  autor.innerHTML = vetAutor[i];
+  autor.className = "materia-autor";
 
   divContainerMateria.appendChild(img);
-  divConteudoMateria.appendChild(h1);
-  divConteudoMateria.appendChild(h3);
+  divConteudoMateria.appendChild(titulo);
+  divConteudoMateria.appendChild(autor);
 
   divContainerMateria.appendChild(divConteudoMateria);
 
@@ -54,19 +54,19 @@ function buscarAutor() {
       var divConteudoMateria = document.createElement("div");
       divConteudoMateria.className = "materia-conteudo";
     
-      var h1 = document.createElement("h1");
-      h1.className = "materia-titulo";
-      h1.innerHTML = vetTitulo[i];
-      h1.id = "noticia" + i;
-      h1.addEventListener("click", cliqueTitulo);
+      var titulo = document.createElement("h1");
+      titulo.className = "materia-titulo";
+      titulo.innerHTML = vetTitulo[i];
+      titulo.id = "noticia" + i;
+      titulo.addEventListener("click", cliqueTitulo);
     
-      var h3 = document.createElement("h3");
-      h3.innerHTML = vetAutor[i];
-      h3.className = "materia-autor";
+      var autor = document.createElement("h3");
+      autor.innerHTML = vetAutor[i];
+      autor.className = "materia-autor";
     
       divConteinerMateria.appendChild(img);
-      divConteudoMateria.appendChild(h1);
-      divConteudoMateria.appendChild(h3);
+      divConteudoMateria.appendChild(titulo);
+      divConteudoMateria.appendChild(autor);
     
       divConteinerMateria.appendChild(divConteudoMateria);
     
@@ -84,9 +84,9 @@ function cliqueTitulo() {
     var divMateria = document.createElement("div");
     divMateria.className = "noticia-container";
 
-    var h1 = document.createElement("h1");
-    h1.innerHTML = vetTitulo[idAtual];
-    h1.className = "noticia-titulo";
+    var titulo = document.createElement("h1");
+    titulo.innerHTML = vetTitulo[idAtual];
+    titulo.className = "noticia-titulo";
 
     var img = document.createElement("img");
     img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
@@ -96,14 +96,14 @@ function cliqueTitulo() {
     texto.innerHTML = vetTexto[idAtual];
     texto.className = "noticia-texto";
 
-    var h3 = document.createElement("h3");
-    h3.innerHTML = vetAutor[idAtual];
-    h3.className = "noticia-autor";
+    var autor = document.createElement("h3");
+    autor.innerHTML = vetAutor[idAtual];
+    autor.className = "noticia-autor";
 
-    divMateria.appendChild(h1);
+    divMateria.appendChild(titulo);
     divMateria.appendChild(img);
     divMateria.appendChild(texto);
-    divMateria.appendChild(h3);
+    divMateria.appendChild(autor);
 
     outMaterias.appendChild(divMateria);
 }

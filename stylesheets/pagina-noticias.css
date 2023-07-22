@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+main{
+  font-family: 'Aleo', sans-serif;
+  line-height: 1.5;
+}
+.materia-container {
+  display: flex;
+  align-items: center;
+  width: auto;
+  max-width: 40%;
+  min-width: 35%;
+  padding: 1%;
+  margin: 5% auto;
+  background-color: rgba(10, 10, 65, 0.050);
+  border-bottom: 2px rgb(10, 10, 65) solid;
+}
+
+.materia-imagem {
+  width: 30%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.materia-titulo {
+  align-items: center;
+  color: rgb(10, 10, 65);
+  font-size: 18px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-family: 'Aleo', sans-serif;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.materia-autor {
+  width: auto;
+  display: flex;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.materia-titulo:hover {
+  color: rgb(50, 50, 150);
+}

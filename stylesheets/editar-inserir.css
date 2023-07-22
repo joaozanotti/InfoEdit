@@ -125,3 +125,12 @@ input[type="submit"] {
     color: white;
     cursor: pointer;
 }
+#btEnviar{
+    font-family: 'Aleo', sans-serif;
+    font-size: 18px;
+    background-color: rgb(13, 13, 69);
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 20px;
+}

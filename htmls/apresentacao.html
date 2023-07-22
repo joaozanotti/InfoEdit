@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<!-- Código realizado por João Vitor, Giovanna, Sindy, Adrian e Laura - TEMA: Gerenciamento de um site de notícias - entrega de código parcial. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link REL="SHORTCUT ICON" HREF="../imagens/ImagensHeaderFooter/logo.png">
+    <title>Home - INFOEDIT</title>
+    <link rel="stylesheet" href="../stylesheets/reset.css">
+    <link rel="stylesheet" href="../stylesheets/style-apresentacao.css">
+    <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
+</head>
+
+<body>
+    <!--Cabeçalho comum do site-->
+    <header>
+        <div class="caixa">
+            <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="opcoesCabecalho" href="apresentacao.html">
+                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/casa.png" alt="casa">INÍCIO</a>
+                    </li>
+                    <li>
+                        <a class="opcoesCabecalho" href="pagina-inicial.html">
+                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png" alt="noticia">NOTÍCIAS</a>
+                    </li>
+                    <li>
+                        <a class="opcoesCabecalho" href="login.html">
+                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/login.png" alt="noticia">LOGIN</a>
+                    </li>
+                    <!-- <li id="campoPesquisa">
+                        <input id="inBuscaAutor" type="text">
+                        <img src="lupaPreta.png" id="imgLupa" alt="buscar" />
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Corpo da página inicial do site -->
+    <main>
+        <h1 id="titulo1">BEM VINDO AO PORTAL DE NOTÍCIAS ONLINE</h1>
+
+        <div id="divGif">
+            <img class="imgGif" src="../imagens/imagensMain/gifComputador.gif" alt="gif">
+        </div>
+        <p class="paragrafoLogin"> Aqui na <strong>INFOEDIT</strong> você pode, após o acesso do login:</p>
+
+        <section class="sectionServicos">
+            <div class="caixaServicos">
+                <p>INSERIR NOTÍCIAS</p>
+            </div>
+            <div class="caixaServicos">
+                <p>EDITAR NOTÍCIAS</p>
+            </div>
+            <div class="caixaServicos">
+                <p>EXCLUIR NOTÍCIAS</p>
+            </div>
+        </section>
+        <section class="sectionMapa">
+            <p>AONDE ESTAMOS?</p>
+            <iframe id="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3750.733882946672!2d-40.595912!3d-19.935616!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb78314b8fd5b5f%3A0xd70630d4d5ac6e08!2sSanta%20Teresa%20Noticia!5e0!3m2!1spt-BR!2sbr!4v1689961079276!5m2!1spt-BR!2sbr"
+                width="50%" height="450"></iframe>
+        </section>
+        <section class="sectionContato">
+            <p id="pContato">ENTRE EM CONTATO CONOSCO</p>
+            <img class="imgContato" src="../imagens/imagensMain/faleConosco.png" alt="contato">
+            <p id="pEmail"><img class="contatoIcone" src="../imagens/imagensMain/gmail.png" alt="">Email: infoedit@email.com</p>
+            <p id="pTel"><img class="contatoIcone" src="../imagens/imagensMain/atendimento.png" alt=""> Tel: 27 99603-8223</p>
+            <p id="pInsta"><img class="contatoIcone" src="../imagens/imagensMain/instagram.png" alt="">@infoedit</p>
+        </section>
+    </main>
+    <!-- Rodapé comum do site -->
+    <footer>
+        <div id="footerCopy">
+            <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
+            <p id="copyright">&copy; Copyright INFOEDIT</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

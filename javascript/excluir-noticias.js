@@ -4,13 +4,18 @@ const outMaterias = document.getElementById("outMaterias");
 const btExcluir = document.getElementById("btExcluir");
 
 //CRIANDO BOTAO PARA ACESSO DA FUNCION DE PESQUISAR;
-btPesquisaExcluir.addEventListener("click", pesquisar);
+btPesquisaExcluir.addEventListener("click", pesquisarExcluir);
 
-function pesquisar() {
-  var pesquisaTitulo = (inPesquisaExcluir.value).toUpperCase();// TRANSFORMANDO TUDO EM MAIÚSCULO
-  outMaterias.innerHTML = "";
+function pesquisarExcluir() {
+
+    var pesquisaTitulo = (inPesquisaExcluir.value).toUpperCase();// TRANSFORMANDO TUDO EM MAIÚSCULO
+
+    outMaterias.innerHTML = "";
+
     for (var i = 0; i < vetTitulo.length; i++) {
+
         let autorAux = vetTitulo[i].toUpperCase();
+
         if (autorAux.indexOf(pesquisaTitulo) >= 0) {
             var divContainerMateria = document.createElement("div");
             divContainerMateria.className = "materia-container";
@@ -23,13 +28,13 @@ function pesquisar() {
             //CRIANDO DIVS PARA ESTILIZAÇÃO
             var divConteudoMateria = document.createElement("div");
             divConteudoMateria.className = "materia-conteudo";
-            
+
             //MOSTRANDO OS TITULOS DA MATERIA;
             var titulo = document.createElement("h1");
             titulo.className = "materia-titulo";
             titulo.innerHTML = vetTitulo[i];
             titulo.id = "noticia" + i;
-            titulo.addEventListener("click", cliqueTitulo);
+            titulo.addEventListener("click", cliqueTituloExcluir);
 
             //MOSTRANDO NOME DO AUTOR;
             var autor = document.createElement("h3");
@@ -40,7 +45,8 @@ function pesquisar() {
             button.type = "button";
             button.value = "Excluir";
             button.id = "btExcluir" + i;
-            button.addEventListener("click", excluir);
+            button.className = "materia-button";
+            button.addEventListener("click", excluirDados);
 
             divContainerMateria.appendChild(img);
             divConteudoMateria.appendChild(titulo);
@@ -54,14 +60,14 @@ function pesquisar() {
     }
 }
 
-function cliqueTitulo() {
+function cliqueTituloExcluir() {
     outMaterias.innerHTML = "";
 
     var idClicado = this.id;
     var idAtual = idClicado.substring(7);
 
-    var divMateria = document.createElement("div");
-    divMateria.className = "noticia-container";
+    var artMaterias = document.createElement("article");
+    artMaterias.className = "noticia-container";
 
     var titulo = document.createElement("h1");
     titulo.innerHTML = vetTitulo[idAtual];
@@ -71,7 +77,7 @@ function cliqueTitulo() {
     img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
     img.className = "noticia-imagem";
 
-    var texto = document.createElement("article");
+    var texto = document.createElement("p");
     texto.innerHTML = vetTexto[idAtual];
     texto.className = "noticia-texto";
 
@@ -83,26 +89,27 @@ function cliqueTitulo() {
     button.type = "button";
     button.value = "Excluir";
     button.id = "btExcluir" + idAtual;
-    button.addEventListener("click", excluir);
+    button.className = "noticia-button";
+    button.addEventListener("click", excluirDados);
 
-    divMateria.appendChild(titulo);
-    divMateria.appendChild(img);
-    divMateria.appendChild(texto);
-    divMateria.appendChild(autor);
-    divMateria.appendChild(button);
+    artMaterias.appendChild(titulo);
+    artMaterias.appendChild(img);
+    artMaterias.appendChild(texto);
+    artMaterias.appendChild(autor);
+    artMaterias.appendChild(button);
 
-    outMaterias.appendChild(divMateria);
+    outMaterias.appendChild(artMaterias);
 }
 
-function excluir() {
+function excluirDados() {
     var idClicado = this.id;
     idAtual = idClicado.substring(9);
 
-    vetTitulo.splice(idAtual , 1);
-    vetAutor.splice(idAtual , 1);
-    vetImagens.splice(idAtual , 1);
-    vetTexto.splice(idAtual , 1);
-    
+    vetTitulo.splice(idAtual, 1);
+    vetAutor.splice(idAtual, 1);
+    vetImagens.splice(idAtual, 1);
+    vetTexto.splice(idAtual, 1);
+
     inPesquisaExcluir.value = "";
     outMaterias.innerHTML = "Notícia Excluida com sucesso!";
 

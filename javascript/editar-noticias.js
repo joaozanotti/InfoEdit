@@ -1,30 +1,40 @@
 const inPesquisaEditar = document.getElementById("inPesquisaEditar");
 const btPesquisaEditar = document.getElementById("btPesquisaEditar");
+
 const outMaterias = document.getElementById("outMaterias");
-const btEnviar = document.getElementById("btEnviar");
+
 const formEditar = document.getElementById("formEditar");
+const btEnviar = document.getElementById("btEnviar");
+
 formEditar.style.display = "none";
+
 //Adicionando evento no botão de pesquisa de notícias na página de edição;
 btPesquisaEditar.addEventListener("click", pesquisaEditar);
 
 function pesquisaEditar() {
+
     var pesquisaTitulo = (inPesquisaEditar.value).toUpperCase();
+
     formEditar.style.display = "none";
     outMaterias.innerHTML = "";
 
     if (inPesquisaEditar.value == "") {
+
         alert("Digite o título.");
         inPesquisaEditar.focus();
         outMaterias.innerHTML = "";
 
     } else {
         for (var i = 0; i < vetTitulo.length; i++) {
+
             let autorAux = vetTitulo[i].toUpperCase();
+
             if (autorAux.indexOf(pesquisaTitulo) >= 0) {
+
                 var divContainerMateria = document.createElement("div");
                 divContainerMateria.className = "materia-container";
 
-                var img = document.createElement("img")
+                var img = document.createElement("img");
                 img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
                 img.className = "materia-imagem";
 
@@ -35,7 +45,7 @@ function pesquisaEditar() {
                 titulo.className = "materia-titulo";
                 titulo.innerHTML = vetTitulo[i];
                 titulo.id = "noticia" + i;
-                titulo.addEventListener("click", cliqueTitulo);
+                titulo.addEventListener("click", cliqueTituloExcluir);
 
                 var autor = document.createElement("h3");
                 autor.innerHTML = vetAutor[i];
@@ -45,6 +55,7 @@ function pesquisaEditar() {
                 button.type = "button";
                 button.value = "Editar";
                 button.id = "btEditar" + i;
+                button.className = "materia-button";
                 button.addEventListener("click", inserirDados);
 
                 divContainerMateria.appendChild(img);
@@ -55,6 +66,7 @@ function pesquisaEditar() {
                 divContainerMateria.appendChild(divConteudoMateria);
 
                 outMaterias.appendChild(divContainerMateria);
+
             }
         }
         if (outMaterias.innerHTML == "") {
@@ -63,15 +75,16 @@ function pesquisaEditar() {
     }
 }
 
-function cliqueTitulo() {
+function cliqueTituloExcluir() {
+
     outMaterias.innerHTML = "";
     formEditar.style.display = "none";
 
     var idClicado = this.id;
     var idAtual = idClicado.substring(7);
 
-    var divMateria = document.createElement("div");
-    divMateria.className = "noticia-container";
+    var artMaterias = document.createElement("article");
+    artMaterias.className = "noticia-container";
 
     var titulo = document.createElement("h1");
     titulo.innerHTML = vetTitulo[idAtual];
@@ -81,7 +94,7 @@ function cliqueTitulo() {
     img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
     img.className = "noticia-imagem";
 
-    var texto = document.createElement("article");
+    var texto = document.createElement("p");
     texto.innerHTML = vetTexto[idAtual];
     texto.className = "noticia-texto";
 
@@ -93,15 +106,16 @@ function cliqueTitulo() {
     button.type = "button";
     button.value = "Editar";
     button.id = "btEditar" + idAtual;
+    button.className = "noticia-button";
     button.addEventListener("click", inserirDados);
 
-    divMateria.appendChild(titulo);
-    divMateria.appendChild(img);
-    divMateria.appendChild(texto);
-    divMateria.appendChild(autor);
-    divMateria.appendChild(button);
+    artMaterias.appendChild(titulo);
+    artMaterias.appendChild(img);
+    artMaterias.appendChild(texto);
+    artMaterias.appendChild(autor);
+    artMaterias.appendChild(button);
 
-    outMaterias.appendChild(divMateria);
+    outMaterias.appendChild(artMaterias);
 }
 
 var idAtual;
@@ -118,9 +132,9 @@ function inserirDados() {
     inAutor.value = vetAutor[idAtual];
 }
 
-btEnviar.addEventListener("click", editar);
+btEnviar.addEventListener("click", editarDados);
 
-function editar() {
+function editarDados() {
     //Verificação se foi alterado algo ou não no campo de edição;
     if (vetTitulo[idAtual] == inTitulo.value && vetTexto[idAtual] == inTexto.value && vetAutor[idAtual] == inAutor.value) {
         alert("Realize alguma edição.");

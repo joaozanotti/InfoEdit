@@ -5,10 +5,10 @@ const inTexto = document.getElementById("inTexto");
 const btAdicionar = document.getElementById("btAdicionar");
 const outMaterias = document.getElementById("outMaterias");
 
-btAdicionar.addEventListener("click", adicionar);
+btAdicionar.addEventListener("click", adicionarDados);
 
 var indice;
-function adicionar() {
+function adicionarDados() {
     outMaterias.textContent = "";
 
     if (inTitulo.value == "") {
@@ -50,7 +50,7 @@ function adicionar() {
         titulo.className = "materia-titulo";
         titulo.innerHTML = vetTitulo[indice];
         titulo.id = "noticia" + indice;
-        titulo.addEventListener("click", cliqueTitulo);
+        titulo.addEventListener("click", cliqueTituloAdicionar);
 
         var autor = document.createElement("h3");
         autor.innerHTML = vetAutor[indice];
@@ -66,14 +66,14 @@ function adicionar() {
     }
 }
 
-function cliqueTitulo() {
+function cliqueTituloAdicionar() {
     outMaterias.innerHTML = "";
 
     var idClicado = this.id;
     var idAtual = idClicado.substring(7);
 
-    var divMateria = document.createElement("div");
-    divMateria.className = "noticia-container";
+    var artMaterias = document.createElement("article");
+    artMaterias.className = "noticia-container";
 
     var titulo = document.createElement("h1");
     titulo.innerHTML = vetTitulo[idAtual];
@@ -83,7 +83,7 @@ function cliqueTitulo() {
     img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
     img.className = "noticia-imagem";
 
-    var texto = document.createElement("article");
+    var texto = document.createElement("p");
     texto.innerHTML = vetTexto[idAtual];
     texto.className = "noticia-texto";
 
@@ -91,10 +91,10 @@ function cliqueTitulo() {
     autor.innerHTML = vetAutor[idAtual];
     autor.className = "noticia-autor";
 
-    divMateria.appendChild(titulo);
-    divMateria.appendChild(img);
-    divMateria.appendChild(texto);
-    divMateria.appendChild(autor);
+    artMaterias.appendChild(titulo);
+    artMaterias.appendChild(img);
+    artMaterias.appendChild(texto);
+    artMaterias.appendChild(autor);
 
-    outMaterias.appendChild(divMateria);
+    outMaterias.appendChild(artMaterias);
 }

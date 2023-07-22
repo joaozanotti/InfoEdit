@@ -16,6 +16,7 @@ body {
 header {
    background: url(../imagens/ImagensHeaderFooter/backgraundHeaderFooter.jpg);
    font-family: 'Aleo', serif;
+   width: 100%;
 }
 
 #logoHeader {

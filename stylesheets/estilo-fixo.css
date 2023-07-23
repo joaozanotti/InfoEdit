@@ -25,18 +25,35 @@ header {
    margin-left: 50px;
    padding: 15px;
 }
-.caixa {
+.caixaHeader {
 	position: relative;
 	margin: 0 auto;
-}
-ul {
    display: flex;
-   position: absolute;
-   top: 90px;
-   right: 50px;
-}
+   align-items: center;
 
-.opcoesCabecalho {
+}
+nav {
+	position: absolute; 
+	right: 40px;
+   text-align: center;
+}  
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+nav a {
+	text-transform: uppercase;
+	color: white;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+   align-items: center;
+   border-radius: 8px;
+   padding: 8px;
+   border: 2px rgba(255, 255, 255, 0) solid;
+   cursor: pointer;
+}
+ /* .opcoesCabecalho {
    color: white;
    display: inline;
    border-radius: 8px;
@@ -44,29 +61,37 @@ ul {
    font-weight: bold;
    text-decoration: none;
    font-size: 20px;
-   cursor: pointer;
-   padding: 8px;
-   border: 2px rgba(255, 255, 255, 0) solid;
-}
+   
+   
+   
+}   */
 
 #campoPesquisa {
    border-radius: 8px;
    background-color: white;
-}
-
-#inBuscaAutor {
    color: black;
    display: inline;
    font-size: 16px;
    padding: 10px;
-   border-radius: 8px 0px 0px 8px;
+   border-radius: 8px;
    border: 1px white solid;
 }
 
-#imgLupa {
-   width: 20px;
+ #inBuscaAutor {
+   color: black;
    display: inline;
-   padding: 3px 10px 0px 0px;
+   font-size: 16px;
+   padding: 10px;
+   border-radius: 8px;
+   border: 1px white solid;
+} 
+
+#imgLupa {
+   width: 25px;
+   display: inline;
+   background-color: white;
+   border-radius: 8px;
+   align-items: center;
 }
 
 .opcoesCabecalho:hover {

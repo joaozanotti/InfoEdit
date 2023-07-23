@@ -15,14 +15,13 @@ body {
 
 header {
    background: url(../imagens/ImagensHeaderFooter/backgraundHeaderFooter.jpg);
-   background-color: rgb(13, 13, 69);
    font-family: 'Aleo', serif;
    width: 100%;
 }
 
 #logoHeader {
    display: inline;
-   width: 5%;
+   width: 10%;
    margin-left: 50px;
    padding: 15px;
 }
@@ -33,7 +32,7 @@ header {
 ul {
    display: flex;
    position: absolute;
-   top: 50px;
+   top: 90px;
    right: 50px;
 }
 
@@ -87,7 +86,6 @@ ul {
 
 footer {
     background: url(../imagens/ImagensHeaderFooter/backgraundHeaderFooter.jpg);
-   background-color: rgb(13, 13, 69);
    text-align: center;
    width: 100%;
    position: sticky;

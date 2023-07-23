@@ -117,7 +117,7 @@ function excluirDados() {
     var idClicado = this.id; //VERIFICA O ID DO BOTAO,E GUARDA O ID DO BOTAO CLICADO "btExcluir(0 a 5)"
     idAtual = idClicado.substring(9);  //PEGA O CARACTERE DE NUMERO 9 E GUARDA; 
 
-    vetTitulo.splice(idAtual, 1);
+    vetTitulo.splice(idAtual, 1); //SELECIONA O ELEMENTO DA POSIÇÃO idAtual E EXCLUI ELE (1);
     vetAutor.splice(idAtual, 1);
     vetImagens.splice(idAtual, 1);
     vetTexto.splice(idAtual, 1);

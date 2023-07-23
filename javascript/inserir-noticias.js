@@ -10,7 +10,7 @@ btAdicionar.addEventListener("click", adicionarDados);
 var indice;
 function adicionarDados() {
     outMaterias.textContent = "";
-
+    //VERIFICAÇÃO DE DADOS DE ENTRADA;
     if (inTitulo.value == "") {
         alert("Escreva um título válido para a notícia.");
         inTitulo.value = "";
@@ -35,7 +35,7 @@ function adicionarDados() {
         vetAutor.push(autorAdicionado);
         vetTexto.push(conteudoAdicionado);
 
-        indice = vetTitulo.length - 1;
+        indice = vetTitulo.length - 1; //Definir o indice da matéria inserida usando o comando length;
         var divContainerMateria = document.createElement("div");
         divContainerMateria.className = "materia-container";
 

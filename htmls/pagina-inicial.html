@@ -21,19 +21,21 @@
             <nav>
                 <ul>
                     <li>
-                        <a class="opcoesCabecalho" href="pagina-inicial.html">
+                        <a class="opcoesCabecalho" href="apresentacao.html">
                             <img id="imgIcone" src="../imagens/ImagensHeaderFooter/casa.png" alt="casa">INÍCIO</a>
                     </li>
                     <li>
-                        <a class="opcoesCabecalho" href="pagina-noticias.html">
-                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png" alt="noticia">NOTÍCIAS</a>
+                        <a class="opcoesCabecalho" href="pagina-inicial.html">
+                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png"
+                                alt="noticia">NOTÍCIAS</a>
                     </li>
                     <li>
                         <a class="opcoesCabecalho" href="login.html">
                             <img id="imgIcone" src="../imagens/ImagensHeaderFooter/login.png" alt="noticia">LOGIN</a>
                     </li>
-                    <li id="campoPesquisa"><input id="inBuscaAutor" type="search">
-                    <img src="../imagens/ImagensHeaderFooter/lupaPreta.png" id="imgLupa" alt="buscar" />
+                    <li id="campoPesquisa">
+                        <input id="inBuscaAutor" type="text">
+                        <img src="../imagens/ImagensHeaderFooter/lupaPreta.png" id="imgLupa" alt="buscar" />
                     </li>
                 </ul>
             </nav>
@@ -43,9 +45,18 @@
     <main>
         <h1 id="titulo1">BEM VINDO AO PORTAL DE NOTÍCIAS ONLINE</h1>
 
-        <div id="divGif">
+        <section class="slideImg">
+            <div style="background-image: url(../imagens/ImagensNoticias/imgAreasInteligenciaArtificial.png);"></div>
+            <div style="background-image: url(../imagens/ImagensNoticias/imgHomemParaplegico.png);"></div>
+            <div style="background-image: url(../imagens/ImagensNoticias/imgMeninasNoLimite.png);"></div>
+            <div style="background-image: url(../imagens/ImagensNoticias/imgRadicalInfluenciaTecnologia.png);"></div>
+            <div style="background-image: url(../imagens/ImagensNoticias/imgTransplanteCerebro.png);"></div>
+            <div style="background-image: url(../imagens/ImagensNoticias/imgUnicoRestauranteDoMundo.png);"></div>
+        </section>
+
+        <!-- <div id="divGif">
             <img class="imgGif" src="../imagens/imagensMain/gifComputador.gif" alt="gif">
-        </div>
+        </div> -->
         <p class="paragrafoLogin"> Aqui na <strong>INFOEDIT</strong> após o acesso no login desbloqueiam para os usuários as seguintes funcionabilidades:</p>
 
         <section class="sectionServicos">
@@ -60,16 +71,18 @@
             </div>
         </section>
         <section class="sectionMapa">
-            <p> Onde estamos localizados:</p>
+            <p>Onde nós estamos localizados:</p>
             <iframe id="mapa"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3750.733882946672!2d-40.595912!3d-19.935616!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb78314b8fd5b5f%3A0xd70630d4d5ac6e08!2sSanta%20Teresa%20Noticia!5e0!3m2!1spt-BR!2sbr!4v1689961079276!5m2!1spt-BR!2sbr"
                 width="50%" height="450"></iframe>
         </section>
         <section class="sectionContato">
-            <p id="pContato">Nossas formas de contato:</p>
+            <p id="pContato">Nossas formas de contato: </p>
             <img class="imgContato" src="../imagens/imagensMain/faleConosco.png" alt="contato">
-            <p id="pEmail"><img class="contatoIcone" src="../imagens/imagensMain/gmail.png" alt="">Email: infoedit@email.com</p>
-            <p id="pTel"><img class="contatoIcone" src="../imagens/imagensMain/atendimento.png" alt=""> Tel: 27 99603-8223</p>
+            <p id="pEmail"><img class="contatoIcone" src="../imagens/imagensMain/gmail.png" alt="">Email:
+                infoedit@email.com</p>
+            <p id="pTel"><img class="contatoIcone" src="../imagens/imagensMain/atendimento.png" alt=""> Tel: 27
+                99603-8223</p>
             <p id="pInsta"><img class="contatoIcone" src="../imagens/imagensMain/instagram.png" alt="">@infoedit</p>
         </section>
     </main>

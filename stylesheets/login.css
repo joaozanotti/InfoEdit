@@ -1,55 +1,57 @@
 /* Estilização login */
+/* Linkando fonte para o site */
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Adicionando a fonte ao main do site; */
 main {
     font-family: 'Aleo', sans-serif;
 }
 
-.login {
-    margin: 50px auto;
+.login { /*div - main*/
+    margin: 50px auto; /*Centraliza seus elementos*/
     border: 5px solid rgb(13, 13, 69);
-    border-radius: 10px;
-    background-color: #ebeaea;
-    width: 20%;
-    padding: 50px 10px;
+    border-radius: 10px; /*arredondamento das vértices*/
+    background-color: #ebeaea; /*cor de fundo*/
+    width: 20%; /*tamanho da div*/
+    padding: 50px 10px; /*espaçamento interno*/
 }
 
-#tituloLogin {
-    display: block;
-    text-align: center;
-    font-size: 40px;
+#tituloLogin { /*h1*/
+    display: block; /*elementos um embaixo do outro*/
+    text-align: center; /*texto centralizado*/
+    font-size: 40px; /*tamanho da fonte*/
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: bold; /*fonte em negrito*/
 }
 
-#senha {
+#senha { /*div do input para a senha*/
     text-align: center;
     font-size: 22px;
-    margin: 20px;
+    margin: 20px; /*espaçamento externo*/
 }
 
-.inputSenha {
-    font-family: 'Aleo', sans-serif;
+.inputSenha { /*input para a senha*/
+    font-family: 'Aleo', sans-serif; /*Adicionando fonte no campo de preenchimento*/
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 10px; /*Margem no topo do elemento*/
     border-radius: 15px;
     padding: 8px;
     border: 2px black solid;
 }
 
-.btLogin {
-    font-family: 'Aleo', sans-serif;
+.btLogin { /*botão redirecionado à página de administrador*/
+    font-family: 'Aleo', sans-serif; /*Adicionando fonte no botão*/
     padding: 10px;
     display: block;
     background-color: rgb(13, 13, 69);
-    color: white;
+    color: white; /*cor da fonte*/
     border-radius: 10px;
     font-size: 20px;
     margin: 10px auto;
-    cursor: pointer;
+    cursor: pointer; /*seta muda para mão*/
 }
 
-.logoLogin {
+.logoLogin { /*logo do site na caixa da div*/
     width: 30%;
     margin-left: 108px;
     padding-top: 15px;

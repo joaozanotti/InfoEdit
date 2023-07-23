@@ -7,7 +7,7 @@
     <title>Excluir Notícias - INFOEDIT</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
-    <link rel="stylesheet" href="../stylesheets/editar-inserir.css">
+    <link rel="stylesheet" href="../stylesheets/editar-inserir-excluir.css">
     <link rel="stylesheet" href="../stylesheets/pagina-noticias.css">
     <link rel="stylesheet" href="../stylesheets/noticias-conteudo.css">
 </head>
@@ -25,6 +25,7 @@
                 <li>
                     <a class="opcoesCabecalho" href="pagina-noticias.html">
                         <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png" alt="noticia">NOTÍCIAS</a>
+                </li>
                 <li>
                     <a class="opcoesCabecalho" href="inserir-noticias.html">INSERIR</a>
                 </li>
@@ -39,14 +40,15 @@
     </header>
     <!-- Corpo da página inicial do site -->
     <main>
-        <h1 class="titulo">EXCLUA UMA NOTÍCIA</h1>
-        <p id="pPesquisaExcluir">Pesquisar notícia:</p>
+        <h1 class="tituloFixo">EXCLUA UMA NOTÍCIA</h1>
+        <p class="subtitulo">Pesquisar notícia:</p>
 
-        <input type="search" id="inPesquisaExcluir">
-        <p><input type="button" value="Pesquisar" id="btPesquisaExcluir"></p>
+        <input type="search" id="inPesquisaExcluir" class="subtopico">
+        <p><input type="button" value="Pesquisar" id="btPesquisaExcluir" class="btFixo"></p>
         
         <div id="outMaterias"></div>
     </main>
+
     <!-- Rodapé comum do site -->
     <footer>
         <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
@@ -54,6 +56,6 @@
     </footer>
     <script src="../javascript/vetores.js"></script>
     <script src="../javascript/excluir-noticias.js"></script>
+    
 </body>
-
 </html>

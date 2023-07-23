@@ -10,37 +10,19 @@ main {
     text-align: start;
 }
 
-.titulo{
+.tituloFixo{
     margin: 50px 0px 30px 0px;
     font-size: 32px;
     font-weight: bold;
     text-decoration: underline rgb(13, 13, 69);
 }
-#pPesquisaEditar{
+
+.subtitulo{
     font-size: 22px;
     margin-bottom: 20px;
+    display: block;
 }
-#pPesquisaExcluir{
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-#inPesquisaEditar{
-    font-family: 'Aleo', sans-serif;
-    font-size: 18px;
-    padding: 15px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    border: black solid;
-}
-#inPesquisaExcluir{
-    font-family: 'Aleo', sans-serif;
-    font-size: 18px;
-    padding: 15px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    border: black solid;
-}
-#inTitulo{
+.subtopico{
     font-family: 'Aleo', sans-serif;
     font-size: 18px;
     padding: 10px;
@@ -48,59 +30,20 @@ main {
     margin-bottom: 20px;
     border: black solid;
 }
-#inTexto{
-    font-family: 'Aleo', sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    border: black solid;
-}
-#inAutor{
-    font-family: 'Aleo', sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    border: black solid;
-}
-#btAdicionar{
+
+.btFixo{
     font-family: 'Aleo', sans-serif;
     font-size: 18px;
     background-color: rgb(13, 13, 69);
     padding: 10px;
     border-radius: 20px;
     color: white;
-    margin-bottom: 20px;
-}
-#btPesquisaExcluir{
-    font-family: 'Aleo', sans-serif;
-    font-size: 18px;
-    background-color: rgb(13, 13, 69);
-    padding: 10px;
-    border-radius: 20px;
-    color: white;
-    margin-bottom: 20px;
-}
-#btPesquisaEditar {
-    font-family: 'Aleo', sans-serif;
-    font-size: 18px;
-    background-color: rgb(13, 13, 69);
-    padding: 10px;
-    border-radius: 20px;
-    color: white;
-    margin-bottom: 20px;
-}
-/* form */
-.form-group {
     margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    font-size: 22px;
-    margin: 20px;
+/* form */
+.form-group {
+    margin-bottom: 20px;
 }
 
 input{
@@ -113,13 +56,6 @@ textarea {
     padding: 5px;
     font-size: 16px;
 }
-
-select {
-    width: 50%;
-    padding: 5px;
-    font-size: 16px;
-}
-
 
 input[type="submit"] {
     background-color: rgb(10, 10, 65);

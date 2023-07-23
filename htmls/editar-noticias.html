@@ -7,7 +7,7 @@
     <title>Editar Notícias - INFOEDIT</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
-    <link rel="stylesheet" href="../stylesheets/editar-inserir.css">
+    <link rel="stylesheet" href="../stylesheets/editar-inserir-excluir.css">
     <link rel="stylesheet" href="../stylesheets/noticias-conteudo.css">
     <link rel="stylesheet" href="../stylesheets/pagina-noticias.css">">
 </head>
@@ -39,31 +39,31 @@
     </header>
     <!-- Corpo da página inicial do site -->
     <main>
-        <h1 class="titulo">EDITE UMA NOTÍCIA</h1>
-        <p id="pPesquisaEditar">Pesquisar notícia:</p>
+        <h1 class="tituloFixo">EDITE UMA NOTÍCIA</h1>
+        <p class="subtitulo">Pesquisar notícia:</p>
 
-        <input type="search" id="inPesquisaEditar">
-        <p><input type="button" value="Pesquisar" id="btPesquisaEditar"></p>
+        <input type="search" id="inPesquisaEditar" class="subtopico">
+        <p><input type="button" value="Pesquisar" id="btPesquisaEditar" class="btFixo"></p>
 
         <div id="outMaterias"></div>
 
         <form id="formEditar">
             <div class="form-group">
-                <label for="inTitulo">Título da Matéria:</label>
-                <input type="text" id="inTitulo" required>
+                <label class="subtitulo">Título da Matéria:</label>
+                <input type="text" id="inTitulo" class="subtopico" required>
             </div>
 
             <div class="form-group">
-                <label for="inTexto">Texto da Matéria:</label>
-                <textarea type="text" id="inTexto" rows="12" required></textarea>
+                <label class="subtitulo">Texto da Matéria:</label>
+                <textarea type="text" id="inTexto" class="subtopico" rows="12" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="inAutor">Autor da Matéria:</label>
-                <input type="text" id="inAutor" required>
+                <label class="subtitulo">Autor da Matéria:</label>
+                <input type="text" id="inAutor" class="subtopico" required>
             </div>
 
-            <input type="button" value="Enviar" id="btEnviar">
+            <input type="button" value="Enviar" id="btEnviar" class="btFixo">
         </form>
     </main>
     <!-- Rodapé comum do site -->
@@ -74,5 +74,4 @@
     <script src="../javascript/vetores.js"></script>
     <script src="../javascript/editar-noticias.js"></script>
 </body>
-
 </html>

@@ -7,7 +7,7 @@
     <title>Inserir Notícias - INFOEDIT</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
-    <link rel="stylesheet" href="../stylesheets/editar-inserir.css">
+    <link rel="stylesheet" href="../stylesheets/editar-inserir-excluir.css">
     <link rel="stylesheet" href="../stylesheets/pagina-noticias.css">
     <link rel="stylesheet" href="../stylesheets/noticias.css">
 </head>
@@ -25,6 +25,7 @@
                 <li>
                     <a class="opcoesCabecalho" href="pagina-noticias.html">
                         <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png" alt="noticia">NOTÍCIAS</a>
+                </li>
                 <li>
                     <a class="opcoesCabecalho" href="inserir-noticias.html">INSERIR</a>
                 </li>
@@ -37,32 +38,33 @@
             </ul>
         </nav>
     </header>
+
     <!-- Corpo da página inicial do site -->
     <main>
         
-        <h1 class="titulo">INSIRA UMA NOTÍCIA</h1>
+        <h1 class="tituloFixo">INSIRA UMA NOTÍCIA</h1>
 
         <form>
             <div class="form-group">
-                <label for="nome">Título da Matéria:</label>
-                <input type="text" id="inTitulo" name="nome" required>
+                <label class="subtitulo">Título da Matéria:</label>
+                <input type="text" id="inTitulo" name="nome"  class="subtopico" required>
             </div>
 
             <div class="form-group">
-                <label for="texto">Texto da Matéria:</label>
-                <textarea type="text" id="inTexto" name="texto" rows="10" required></textarea>
+                <label class="subtitulo" >Texto da Matéria:</label>
+                <textarea type="text" id="inTexto" name="texto" class="subtopico" rows="10" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="autor">Autor da Matéria:</label>
-                <input type="text" id="inAutor" name="autor" required>
-                <input type="button" id="btAdicionar" value="Incluir">
+                <label class="subtitulo">Autor da Matéria:</label>
+                <input type="text" id="inAutor" name="autor" class="subtopico" required>
+                <input type="button" id="btAdicionar" value="Incluir" class="btFixo">
             </div>
         </form>
 
         <div id="outMaterias"></div>
-
     </main>
+
     <!-- Rodapé comum do site -->
     <footer>
         <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
@@ -73,5 +75,4 @@
     <script src="../javascript/inserir-noticias.js"></script>
 
 </body>
-
 </html>

@@ -9,23 +9,81 @@ header, main, footer {
 /* ------------- MAIN ------------- */
 
 main {
-   width: 1200px;
-   margin: 0 auto;
+   width: 100%;
 }
 
 /* ------------ TITULO BOAS VINDAS ------------ */
-.titulo1 {
-   font-size: 32px;
-   text-align: center;
-   margin: 50px 0px 30px 0px;
+
+.caixa-descricaoSite{
+   display:flex;
+   align-items: center;
+   padding: 0 150px;
+}
+.tituloWelcome {
+   font-size: 3.5em;
+   text-align: left;
    font-weight: bolder;
-   padding: 5px;
+   padding-bottom: 30px;
 }
 
-.titulo1:hover {
+.tituloWelcome:hover {
    color: rgb(13, 13, 69);
    text-decoration: underline;
    cursor: default;
+}
+
+.descricaoSite{
+   font-size: 20px;
+   text-align: left;
+   font-weight: bolder;
+   padding: 10px;
+
+}
+
+.imgdescricaoSite{
+   width: 50%;
+}
+
+
+/* ------------- SERVIÇOS ------------- */
+.caixa-Servicos{
+
+   background-color: rgb(13, 13, 69);
+}
+.paragrafoServicos {
+   font-weight: bolder;
+   font-size: 2em;
+   text-align: center;
+   color: white;
+   border: 400px
+}
+
+strong:hover {
+   color: blue;
+}
+
+.sectionServicos {
+   display: flex;
+   align-items: center;
+}
+
+.Servicos {
+   background-color: rgb(255, 255, 255);
+   border: 5px rgb(70, 183, 240) solid;
+   border-radius: 100%;
+   margin: 50px;
+}
+
+.imgServicos{
+   width: 20%;
+   align-items: center;
+}
+
+.caixaServicos:hover {
+   
+   border: 5px rgb(13, 13, 69) solid;
+   background-color: rgb(70, 183, 240);
+   color: black;
 }
 
 /* ------------- SLIDE/CAROUSEL ------------- */
@@ -49,38 +107,6 @@ main {
    flex: 3;
 }
 
-/* ------------- SERVIÇOS ------------- */
-
-.paragrafoLogin {
-   margin-top: 100px;
-   font-size: 30px;
-   text-align: center;
-}
-
-strong:hover {
-   color: blue;
-}
-
-.sectionServicos {
-   text-align: center;
-}
-
-.caixaServicos {
-   display: inline-block;
-   margin: 80px;
-   color: white;
-   padding: 100px 25px 100px 25px;
-   background-color: rgb(13, 13, 69);
-   border: 5px rgb(70, 183, 240) solid;
-   border-radius: 100%;
-   font-size: 20px;
-}
-
-.caixaServicos:hover {
-   border: 5px rgb(13, 13, 69) solid;
-   background-color: rgb(70, 183, 240);
-   color: black;
-}
 
 /* ------------- MAPA ------------- */
 

@@ -45,7 +45,7 @@ function pesquisaEditar() {
                 titulo.className = "materia-titulo";
                 titulo.innerHTML = vetTitulo[i];
                 titulo.id = "noticia" + i;
-                titulo.addEventListener("click", cliqueTituloExcluir);
+                titulo.addEventListener("click", cliqueTituloEditar);
 
                 var autor = document.createElement("h3");
                 autor.innerHTML = vetAutor[i];
@@ -75,7 +75,7 @@ function pesquisaEditar() {
     }
 }
 
-function cliqueTituloExcluir() {
+function cliqueTituloEditar() {
 
     outMaterias.innerHTML = "";
     formEditar.style.display = "none";

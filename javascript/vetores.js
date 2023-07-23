@@ -5,7 +5,7 @@ var vetTitulo = [
     "O único restaurante do mundo que serve carne cultivada em laboratório",
     "Por que ainda não é possível fazer um transplante de cérebro",
     "A radical influência da tecnologia no sono das pessoas",
-    "'Meninas no limite' por que as adolescentes sofrem mais com problemas causados por redes sociais"
+    "Meninas no limite' por que as adolescentes sofrem mais com problemas causados por redes sociais"
   ];
   
   var vetAutor = [

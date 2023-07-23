@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
     <link rel="stylesheet" href="../stylesheets/login.css">
+    <link rel="stylesheet" href="../stylesheets/tentativa.css">
     <title>Login - INFOEDIT</title>
 </head>
 
@@ -24,23 +25,31 @@
                     <a class="opcoesCabecalho" href="pagina-noticias.html">
                         <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png" alt="noticia">NOTÍCIAS</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a class="opcoesCabecalho" href="login.html">
                         <img id="imgIcone" src="../imagens/ImagensHeaderFooter/login.png" alt="noticia">LOGIN</a>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </header>
     <!-- Corpo da página inicial do site -->
     <main>
-        <div class="login">
-            <h1 id="tituloLogin">LOGIN</h1>
-            <div id="senha">Senha:
-                <input class="inputSenha" type="password" id="inSenha">
+        <div class="loginconteiner">
+
+            <h1 class="tituloLogin">LOGIN</h1>
+
+            <div class="login">
+                <label for="senha">senha:</label>
+                <input class="inSenha" type="password" id="inSenha">
+                <input class="btLogin" type="button" value="Entrar" id="btLogin">
             </div>
-            <input class="btLogin" type="button" value="Entrar" id="btLogin">
-            <img class="logoLogin" src="../imagens/ImagensHeaderFooter/logoAzul.png" alt="">
+
         </div>
+
+
+        <img class="imgLogo" src="../imagens/ImagensHeaderFooter/logoAzul.png" alt="">
+
+
     </main>
     <!-- Rodapé comum do site -->
     <footer>

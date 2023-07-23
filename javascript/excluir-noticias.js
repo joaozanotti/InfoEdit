@@ -64,7 +64,6 @@ function pesquisarExcluir() {
     }
 }
 
-    // 
 function cliqueTituloExcluir() {
     outMaterias.innerHTML = "";
 

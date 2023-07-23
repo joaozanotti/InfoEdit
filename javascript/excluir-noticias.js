@@ -112,7 +112,7 @@ function cliqueTituloExcluir() {
 
     outMaterias.appendChild(artMaterias);
 }
-
+}
 function excluirDados() {
     var idClicado = this.id;    //VERIFICA O ID DO BOTAO,E GUARDA O ID DO BOTAO CLICADO "btExcluir(0 a 5)"
     idAtual = idClicado.substring(9);  //PEGA O CARACTERE DE NUMERO 9 E GUARDA; 

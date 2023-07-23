@@ -9,26 +9,48 @@ header, main, footer {
 /* ------------- MAIN ------------- */
 
 main {
-   width: 1200px;
-   margin: 0 auto;
+   width: 100%;
 }
 
 /* ------------ TITULO BOAS VINDAS ------------ */
-.titulo1 {
-   font-size: 32px;
-   text-align: center;
-   margin: 50px 0px 30px 0px;
+
+.caixa-descricaoSite{
+   display:flex;
+   align-items: center;
+   padding: 0 150px;
+}
+.tituloWelcome {
+   font-size: 3.5em;
+   text-align: left;
    font-weight: bolder;
-   padding: 5px;
+   padding-bottom: 30px;
 }
 
-.titulo1:hover {
+.tituloWelcome:hover {
    color: rgb(13, 13, 69);
    text-decoration: underline;
    cursor: default;
 }
 
+.descricaoSite{
+   font-size: 20px;
+   text-align: left;
+   font-weight: bolder;
+   padding: 10px;
+
+}
+
+.imgdescricaoSite{
+   width: 50%;
+}
+
 /* ------------- SLIDE/CAROUSEL ------------- */
+
+.caixa-Carousel{
+
+   background-color:rgb(13, 13, 69);;
+   padding: 20px;
+}
 
 .slideImg {
    display: flex;
@@ -82,55 +104,67 @@ strong:hover {
    color: black;
 }
 
+
+
+
 /* ------------- MAPA ------------- */
 
 .sectionMapa {
    text-align: center;
+   padding: 50px;
+   background-color: rgb(13, 13, 69);
+   color: white;
 }
 
 .sectionMapa p {
    font-size: 28px;
    text-decoration: underline double;
-   font-weight: bold;
-   margin-bottom: 50px;
+   font-weight: bolder;
+   padding: 20px;
 }
 
 #mapa {
-   margin-bottom: 50px;
-   border: 3px rgb(13, 13, 69) solid;
+   border: 3px rgb(70, 183, 240) solid;
    box-shadow: 5px 5px 5px rgb(13, 13, 69);
 }
 
 /* ------------- CONTATO ------------- */
 
 .sectionContato {
-   text-align: center;
+   width: 100%;
+   margin: 15px;
 }
 
 #pContato {
-   color: white;
    font-size: 26px;
    text-align: center;
    font-weight: bold;
    padding: 5px;
-   background-color: rgb(13, 13, 69);
+}
+
+.divContatos{
+   margin-left: 500px;
+   display: flex;
 }
 
 .imgContato {
-   width: 20%;
+   width: 30%;
 }
 
 .contatoIcone {
-   width: 1.5%;
-   display: inline;
+   width: 3%;
    margin: 0px 10px;
+}
+.listaContato{
+   padding-top: 60px;
+   align-items: center;
 }
 
 #pEmail,
 #pTel,
 #pInsta {
+   margin: 10px;
    font-size: 20px;
-   padding: 15px;
    text-decoration: underline;
 }
 

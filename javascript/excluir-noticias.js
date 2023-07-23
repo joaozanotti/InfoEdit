@@ -12,6 +12,7 @@ function pesquisarExcluir() {
 
     outMaterias.innerHTML = "";
 
+    //CRIANDO UMA ESTRUTURA DE REPETIÇÁO PARA PESQUISAR 
     for (var i = 0; i < vetTitulo.length; i++) {
 
         let autorAux = vetTitulo[i].toUpperCase();
@@ -41,6 +42,7 @@ function pesquisarExcluir() {
             autor.innerHTML = vetAutor[i];
             autor.className = "materia-autor";
 
+            //CRIANDO BOTÃO DE EXCLUIR COM ID; 
             var button = document.createElement("input");
             button.type = "button";
             button.value = "Excluir";
@@ -48,6 +50,7 @@ function pesquisarExcluir() {
             button.className = "materia-button";
             button.addEventListener("click", excluirDados);
 
+            //JUNTANDO IMG/TITULO/AUTOR/BUTTON EM "divConteudoMateria" PARA EXIBIR AS NOTICIAS;
             divContainerMateria.appendChild(img);
             divConteudoMateria.appendChild(titulo);
             divConteudoMateria.appendChild(autor);
@@ -55,11 +58,13 @@ function pesquisarExcluir() {
 
             divContainerMateria.appendChild(divConteudoMateria);
 
+            //EXIBINDO AS NOTICIAS;
             outMaterias.appendChild(divContainerMateria);
         }
     }
 }
 
+    // 
 function cliqueTituloExcluir() {
     outMaterias.innerHTML = "";
 
@@ -102,7 +107,7 @@ function cliqueTituloExcluir() {
 }
 
 function excluirDados() {
-    var idClicado = this.id;
+    var idClicado = this.id;    // PEGA OS ID DOS BOTOES 
     idAtual = idClicado.substring(9);
 
     vetTitulo.splice(idAtual, 1);

@@ -2,6 +2,7 @@
 main{
   font-family: 'Aleo', sans-serif;
   line-height: 1.5;
+  word-wrap: break-word;
 }
 .materia-container {
   display: flex;

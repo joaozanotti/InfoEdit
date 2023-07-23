@@ -44,49 +44,13 @@ main {
    width: 50%;
 }
 
-
-/* ------------- SERVIÇOS ------------- */
-.caixa-Servicos{
-
-   background-color: rgb(13, 13, 69);
-}
-.paragrafoServicos {
-   font-weight: bolder;
-   font-size: 2em;
-   text-align: center;
-   color: white;
-   border: 400px
-}
-
-strong:hover {
-   color: blue;
-}
-
-.sectionServicos {
-   display: flex;
-   align-items: center;
-}
-
-.Servicos {
-   background-color: rgb(255, 255, 255);
-   border: 5px rgb(70, 183, 240) solid;
-   border-radius: 100%;
-   margin: 50px;
-}
-
-.imgServicos{
-   width: 20%;
-   align-items: center;
-}
-
-.caixaServicos:hover {
-   
-   border: 5px rgb(13, 13, 69) solid;
-   background-color: rgb(70, 183, 240);
-   color: black;
-}
-
 /* ------------- SLIDE/CAROUSEL ------------- */
+
+.caixa-Carousel{
+
+   background-color: #0049b8;
+   padding: 20px;
+}
 
 .slideImg {
    display: flex;
@@ -112,13 +76,15 @@ strong:hover {
 
 .sectionMapa {
    text-align: center;
+   background-color: #8EC6FF;
 }
 
 .sectionMapa p {
    font-size: 28px;
    text-decoration: underline double;
-   font-weight: bold;
-   margin-bottom: 50px;
+   font-weight: bolder;
+   margin: 50px;
+   padding: 50px;
 }
 
 #mapa {
@@ -142,14 +108,20 @@ strong:hover {
    background-color: rgb(13, 13, 69);
 }
 
+.divContatos
+
 .imgContato {
-   width: 20%;
+   display: flex;
+   width: 50%;
 }
 
 .contatoIcone {
    width: 1.5%;
    display: inline;
    margin: 0px 10px;
+}
+.listaContato{
+   display: block;
 }
 
 #pEmail,

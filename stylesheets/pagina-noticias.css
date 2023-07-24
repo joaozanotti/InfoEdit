@@ -4,20 +4,20 @@
 main{
   font-family: 'Aleo', sans-serif;
   line-height: 1.5;
-  word-wrap: break-word;
+  word-wrap: break-word; /*quebra de linha de acordo com o tamanho do main*/
   text-align: center;
 }
 
 /* JAVASCRIPT-------------------------------------------------------------------- */
 /* div que armazena itens da notícia */
 .materia-container {
-  display: flex;
+  display: flex; /*elemento embaixo do outro*/
   align-items: center;
   width: auto;
-  max-width: 40%;
-  min-width: 35%;
-  padding: 1%;
-  margin: 5% auto;
+  max-width: 40%; /*maximo de ocupação*/
+  min-width: 35%; /*mínimo de ocupação*/
+  padding: 18px;
+  margin: 60px auto;
   background-color: rgba(10, 10, 65, 0.050);
   border-bottom: 2px rgb(10, 10, 65) solid;
 }
@@ -39,7 +39,7 @@ main{
   cursor: pointer;
   font-family: 'Aleo', sans-serif;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 1.5; /*altura entre as linhas*/
 }
 
 /* autor da notícia clicada */

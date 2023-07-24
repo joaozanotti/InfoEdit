@@ -64,7 +64,7 @@ main {
    gap: 20px;
 }
 
-.slideImg>div {
+.slideImg div {
    border-radius: 20px;
    border: 3px rgb(13, 13, 69) solid;
    flex: 1; /*todas as imagens no mesmo tamanho no espaço da div*/
@@ -75,7 +75,7 @@ main {
    cursor: pointer;
 }
 
-.slideImg>div:hover {
+.slideImg div:hover {
    flex: 2.3; /*ao tocar na imagem, ela abre no tamanho maior que a apresentada*/
 }
 
@@ -85,11 +85,14 @@ main {
    margin-top: 100px;
    font-size: 30px;
    text-align: center;
+   font-weight: bold;
+   line-height: 1.5;
 }
 
 /* colocando movimento no encostar o mouse no elemento */
 strong:hover {
    color: blue;
+   cursor: default;
 }
 
 /* seção dizendo os serviços */

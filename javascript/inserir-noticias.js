@@ -8,7 +8,11 @@ const outMaterias = document.getElementById("outMaterias");
 // Adicionando o evento de clique no botão para adicionar os dados
 btAdicionar.addEventListener("click", adicionarDados);
 
+// Criando a function para adicionar os dados
 function adicionarDados() {
+    // Limpando o parágrafo de saída para mostrar apenas a notícia que o usuário acabou de inserir
+    outMaterias.innerHTML = "";
+
     // Verificando se o usuário preencheu todos os campos
     if (inTitulo.value == "") {
         alert("Escreva um título válido para a notícia.");

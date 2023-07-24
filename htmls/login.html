@@ -17,28 +17,35 @@
 <body>
     <!--Cabeçalho comum do site-->
     <header>
-        <!--Logo do site-->
-        <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
+        <!--Caixa com elementos de navegação-->
+        <div class="caixaHeader">
+            <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="opcoesCabecalho" href="index.html">
+                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/casa.png" alt="casa">
+                            INÍCIO
+                        </a>
+                    </li>
+                    <li>
+                        <a class="opcoesCabecalho" href="pagina-noticias.html">
+                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png" alt="noticia">
+                            NOTÍCIAS
+                        </a>
+                    </li>
+                    <li>
+                        <a class="opcoesCabecalho" href="login.html">
+                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/login.png" alt="noticia">
+                            LOGIN
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-        <!--Navegação de funcionabilidade-->
-        <nav>
-            <ul>
-                <li>
-                    <a class="opcoesCabecalho" href="pagina-inicial.html">
-                        <img id="imgIcone" src="../imagens/ImagensHeaderFooter/casa.png" alt="casa">INÍCIO</a>
-                </li>
-                <li>
-                    <a class="opcoesCabecalho" href="pagina-noticias.html">
-                        <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png" alt="noticia">NOTÍCIAS</a>
-                </li>
-                <li>
-                    <a class="opcoesCabecalho" href="login.html">
-                        <img id="imgIcone" src="../imagens/ImagensHeaderFooter/login.png" alt="noticia">LOGIN</a>
-                </li>
-            </ul>
-        </nav>
     </header>
-    <!-- Corpo da página inicial do site -->
+    <!-- Corpo da página de login do site -->
     <main>
         <!--Caixa com elementos necessários para o login-->
         <div class="login">
@@ -47,17 +54,16 @@
                 <input class="inputSenha" type="password" id="inSenha">
             </div>
             <input class="btLogin" type="button" value="Entrar" id="btLogin">
-            <img class="logoLogin" src="../imagens/ImagensHeaderFooter/logoAzul.png" alt="">
         </div>
+    </main>
+    <!--FOOTER comum do site-->
+    <footer>
+        <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
+        <p id="copyright">&copy; Copyright INFOEDIT</p>
+    </footer>
 
-        <!--FOOTER comum do site-->
-        <footer>
-            <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
-            <p id="copyright">&copy; Copyright INFOEDIT</p>
-        </footer>
-
-        <!-- Referência aos arquivos JavaScript necessários -->
-        <script src="../javascript/login.js"></script>
+    <!-- Referência aos arquivos JavaScript necessários -->
+    <script src="../javascript/login.js"></script>
 </body>
 
 </html>

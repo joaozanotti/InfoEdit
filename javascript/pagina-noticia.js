@@ -73,6 +73,10 @@ function buscarAutor() {
 
       outMaterias.appendChild(divConteinerMateria);
     }
+    // Verificando se nenhuma notícia foi encontrada e exibindo uma mensagem de alerta
+    if (outMaterias.innerHTML == "") {
+      outMaterias.innerHTML = "Nenhuma matéria encontrada.";
+    }
   }
 }
 

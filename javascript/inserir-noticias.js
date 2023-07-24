@@ -9,7 +9,6 @@ btAdicionar.addEventListener("click", adicionarDados);
 
 var indice;
 function adicionarDados() {
-    outMaterias.textContent = "";
     //VERIFICAÇÃO DE DADOS DE ENTRADA;
     if (inTitulo.value == "") {
         alert("Escreva um título válido para a notícia.");

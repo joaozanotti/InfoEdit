@@ -75,24 +75,29 @@ function pesquisarExcluir() {
 function cliqueTituloExcluir() {
     outMaterias.innerHTML = "";
 
-    var idClicado = this.id;
+    var idClicado = this.id;    
     var idAtual = idClicado.substring(7);
 
+    //ESTILIZAÇÃO DO TEXTO
     var artMaterias = document.createElement("article");
     artMaterias.className = "noticia-container";
 
+    //MOSTRANDO OS TITULOS DA MATERIA;
     var titulo = document.createElement("h1");
     titulo.innerHTML = vetTitulo[idAtual];
     titulo.className = "noticia-titulo";
 
+    //EXIBINDO AS IMAGENS DAS NOTICIAS;
     var img = document.createElement("img");
     img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
     img.className = "noticia-imagem";
 
+    //EXIBINDO O TEXTO DAS NOTICIAS;
     var texto = document.createElement("p");
     texto.innerHTML = vetTexto[idAtual];
     texto.className = "noticia-texto";
 
+    //MOSTRANDO NOME DO AUTOR;
     var autor = document.createElement("h3");
     autor.innerHTML = vetAutor[idAtual];
     autor.className = "noticia-autor";

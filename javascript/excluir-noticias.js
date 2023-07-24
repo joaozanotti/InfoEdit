@@ -71,7 +71,7 @@ function pesquisarExcluir() {
         }
     }
 }
-
+    //FUNCTION INCIADA AO CLICK NO TITULO DA MATERIA 
 function cliqueTituloExcluir() {
     outMaterias.innerHTML = "";
 

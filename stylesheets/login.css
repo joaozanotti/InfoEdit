@@ -1,22 +1,20 @@
 /* Estilização login */
-/* Linkando fonte para o site */
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Adicionando a fonte ao main do site; */
-main {
-    font-family: 'Aleo', sans-serif;
-}
 
 /*div - main*/
+main {
+    margin: auto;
+}
 .login {
     /*Centraliza seus elementos*/
+    text-align: center;
     margin: 50px auto;
     border: 5px solid rgb(13, 13, 69);
     /*arredondamento das vértices*/
     border-radius: 10px;
     background-color: #ebeaea;
      /*tamanho da div*/
-    width: 20%;
+    width: 60%;
     /*espaçamento interno*/
     padding: 50px 10px;
 }
@@ -49,6 +47,7 @@ main {
     border-radius: 15px;
     padding: 8px;
     border: 2px black solid;
+    width: 90%;
 }
 
 /*botão redirecionado à página de administrador*/
@@ -68,6 +67,6 @@ main {
 /*logo do site na caixa da div com elementos do login*/
 .logoLogin {
     width: 30%;
-    margin-left: 108px;
+    text-align: center;
     padding-top: 15px;
 }

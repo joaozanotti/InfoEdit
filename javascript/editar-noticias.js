@@ -23,7 +23,7 @@ function pesquisaEditar() {
     formEditar.style.display = "none";
     outMaterias.innerHTML = "";
 
-    // Verificando se o usuário não digitou nada
+    // Verificando se o usuário digitou algo ou não
     if (inPesquisaEditar.value == "") {
         alert("Digite o título.");
         inPesquisaEditar.focus();
@@ -37,44 +37,56 @@ function pesquisaEditar() {
             // Transformando o conteúdo da posição específica do vetor em maiúsculo para se encaixar com a pesquisa
             let autorAux = vetTitulo[i].toUpperCase();
 
-            // Verificando se o texto que o usuário digitou está presente na posição do vetor
+            //Verificação de pertencimento das letras preenchidas pelo usuário em algum determinado elemento de um vetor
             if (autorAux.indexOf(pesquisaTitulo) >= 0) {
 
                 // Criando os elementos com seus determinados atributos para serem exibidos na página
+
+                // Criando divs para estilização
                 var divContainerMateria = document.createElement("div");
                 divContainerMateria.className = "materia-container";
 
+                // Criando as imagens das notícias
                 var img = document.createElement("img");
                 img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
                 img.className = "materia-imagem";
 
+                // Criando divs para estilização
                 var divConteudoMateria = document.createElement("div");
                 divConteudoMateria.className = "materia-conteudo";
 
+                // Criando o título da matéria
                 var titulo = document.createElement("h1");
                 titulo.className = "materia-titulo";
                 titulo.innerHTML = vetTitulo[i];
+                // Adicionando um id no título para depois usarmos na função de clique no título
                 titulo.id = "noticia" + i;
                 titulo.addEventListener("click", cliqueTituloEditar);
 
+                // Criando nome do autor
                 var autor = document.createElement("h3");
                 autor.innerHTML = vetAutor[i];
                 autor.className = "materia-autor";
 
+                // Criando botão de editar
                 var button = document.createElement("input");
                 button.type = "button";
                 button.value = "Editar";
+                // Adicionando um id no botão para depois usarmos na função de editar dados
                 button.id = "btEditar" + i;
                 button.className = "materia-button";
                 button.addEventListener("click", inserirDados);
 
+                // Colocando img em uma div e o titulo/autor/button em outra div
                 divContainerMateria.appendChild(img);
                 divConteudoMateria.appendChild(titulo);
                 divConteudoMateria.appendChild(autor);
                 divConteudoMateria.appendChild(button);
 
+                // Juntando as duas divs para formatação
                 divContainerMateria.appendChild(divConteudoMateria);
 
+                // Exibindo as notícias
                 outMaterias.appendChild(divContainerMateria);
 
             }
@@ -89,27 +101,32 @@ function pesquisaEditar() {
 // Criando a function de clicar no título e entrar na notícia
 function cliqueTituloEditar() {
 
-    // Limpando o campode saída e ocultando o formulário de edição
+    // Limpando o campo de saída e ocultando o formulário de edição
     outMaterias.innerHTML = "";
     formEditar.style.display = "none";
 
-    // Pegando o elemento inteiro do botão que foi clicado e selecionando apenas o id
+    // Pegando o elemento inteiro do título que foi clicado e selecionando apenas o id
     var idClicado = this.id;
-    // Pegando o sétimo caractere da string do id do botão, que será o número
+    // Pegando o sétimo caractere da string do id do título, que será o número
     idAtual = idClicado.substring(7);
 
-    // Criando os elementos e exibindo a notícia na página usando o id do botão que foi pego acima
+    // Criando os elementos e exibindo a notícia na página usando o id do título que foi pego acima
+
+    // Criando o article para estilização do texto
     var artMaterias = document.createElement("article");
     artMaterias.className = "noticia-container";
 
+    // Criando o título da matéria
     var titulo = document.createElement("h1");
     titulo.innerHTML = vetTitulo[idAtual];
     titulo.className = "noticia-titulo";
 
+    // Criando a imagem da notícia
     var img = document.createElement("img");
     img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
     img.className = "noticia-imagem";
 
+    // Criando o texto da notícia
     var texto = document.createElement("p");
     texto.innerHTML = vetTexto[idAtual];
     texto.className = "noticia-texto";
@@ -118,19 +135,23 @@ function cliqueTituloEditar() {
     autor.innerHTML = vetAutor[idAtual];
     autor.className = "noticia-autor";
 
+    // Criando o botão de editar
     var button = document.createElement("input");
     button.type = "button";
     button.value = "Editar";
+    // Adicionando um id no botão para depois usarmos na função de editar dados
     button.id = "btEditar" + idAtual;
     button.className = "noticia-button";
     button.addEventListener("click", inserirDados);
 
+    // Juntando todos os elementos no artigo
     artMaterias.appendChild(titulo);
     artMaterias.appendChild(img);
     artMaterias.appendChild(texto);
     artMaterias.appendChild(autor);
     artMaterias.appendChild(button);
 
+    // Exibindo o artigo na página
     outMaterias.appendChild(artMaterias);
 }
 

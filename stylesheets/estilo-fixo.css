@@ -54,18 +54,6 @@ nav a {
    border: 2px rgba(255, 255, 255, 0) solid;
    cursor: pointer;
 }
- /* .opcoesCabecalho {
-   color: white;
-   display: inline;
-   border-radius: 8px;
-   margin-right: 50px;
-   font-weight: bold;
-   text-decoration: none;
-   font-size: 20px;
-   
-   
-   
-}   */
 
 #campoPesquisa {
    border-radius: 8px;
@@ -88,7 +76,7 @@ nav a {
 } 
 
 #imgLupa {
-   width: 25px;
+   width: 15px;
    display: inline;
    background-color: white;
    border-radius: 8px;

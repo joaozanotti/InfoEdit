@@ -98,7 +98,7 @@ function cliqueTituloExcluir() {
     // Pegando o sétimo caractere da string do id do título, que será o número
     var idAtual = idClicado.substring(7);
 
-    // Criando os elementos e exibindo a notícia na página usando o id do botão que foi pego acima
+    // Criando os elementos e exibindo a notícia na página usando o id do título que foi pego acima
 
     // Criando o article para estilização do texto
     var artMaterias = document.createElement("article");

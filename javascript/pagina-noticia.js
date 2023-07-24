@@ -117,7 +117,7 @@ function cliqueTitulo() {
 
   // Pegando o elemento inteiro do título que foi clicado e selecionando apenas o id
   var idClicado = this.id;
-  // Pegando o oitavo caractere da string do id do título, que será o número
+  // Pegando o sétimo caractere da string do id do título, que será o número
   var idAtual = idClicado.substring(7);
 
   // Criando os elementos e exibindo a notícia na página usando o id do botão que foi pego acima
@@ -152,6 +152,6 @@ function cliqueTitulo() {
   artMaterias.appendChild(texto);
   artMaterias.appendChild(autor);
 
-   // Exibindo o artigo na página
+  // Exibindo o artigo na página
   outMaterias.appendChild(artMaterias);
 }

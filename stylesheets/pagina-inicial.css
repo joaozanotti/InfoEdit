@@ -70,6 +70,7 @@ main {
    background-position: center;
    background-size: auto 100%;
    transition: all .6s;
+   cursor: pointer;
 }
 
 .slideImg>div:hover {
@@ -107,6 +108,7 @@ strong:hover {
    border: 5px rgb(13, 13, 69) solid;
    background-color: rgb(70, 183, 240);
    color: black;
+   cursor: pointer;
 }
 
 

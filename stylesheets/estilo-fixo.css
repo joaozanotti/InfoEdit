@@ -3,8 +3,6 @@
 /* Linkando fonte do site */
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Alternates:wght@100;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 /* Adicionando fonte aos componentes no body */
 header, main, footer{
    font-family: 'Aleo', sans-serif;
@@ -43,7 +41,7 @@ nav {
 	position: absolute; 
 	right: 40px;
    text-align: center; /*alinha o texto no centro de um componente do body*/
-}  
+}
 nav li {
 	display: inline;
 	margin: 0 0 0 15px;

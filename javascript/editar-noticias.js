@@ -1,36 +1,46 @@
+// Referenciando os elementos no documento HTML
 const inPesquisaEditar = document.getElementById("inPesquisaEditar");
 const btPesquisaEditar = document.getElementById("btPesquisaEditar");
-
 const outMaterias = document.getElementById("outMaterias");
-
 const formEditar = document.getElementById("formEditar");
 const btEnviar = document.getElementById("btEnviar");
+var idAtual;
 
+// Inicializando a página com o formulário de edição oculto
 formEditar.style.display = "none";
 
-//Adicionando evento no botão de pesquisa de notícias na página de edição;
+// Adicionando os eventos para executar as functions desejadas
 btPesquisaEditar.addEventListener("click", pesquisaEditar);
+btEnviar.addEventListener("click", editarDados);
 
+// Criando a function de pesquisa por título
 function pesquisaEditar() {
 
+    // Recebendo o texto que o usuário digitou e transformando em maiúsculo
     var pesquisaTitulo = (inPesquisaEditar.value).toUpperCase();
 
+    // Ocultando o fomulário de edição e limpando as matérias em um caso de nova pesquisa
     formEditar.style.display = "none";
     outMaterias.innerHTML = "";
 
+    // Verificando se o usuário não digitou nada
     if (inPesquisaEditar.value == "") {
-
         alert("Digite o título.");
         inPesquisaEditar.focus();
         outMaterias.innerHTML = "";
 
+    // Se tiver digitado, o código continua
     } else {
+        // Percorrendo o vetor de título
         for (var i = 0; i < vetTitulo.length; i++) {
 
+            // Transformando o conteúdo da posição específica do vetor em maiúsculo para se encaixar com a pesquisa
             let autorAux = vetTitulo[i].toUpperCase();
 
+            // Verificando se o texto que o usuário digitou está presente na posição do vetor
             if (autorAux.indexOf(pesquisaTitulo) >= 0) {
 
+                // Criando os elementos com seus determinados atributos para serem exibidos na página
                 var divContainerMateria = document.createElement("div");
                 divContainerMateria.className = "materia-container";
 
@@ -69,20 +79,26 @@ function pesquisaEditar() {
 
             }
         }
+        // Verificando se nenhuma notícia foi encontrada e exibindo uma mensagem de alerta
         if (outMaterias.innerHTML == "") {
             outMaterias.innerHTML = "Nenhuma matéria encontrada.";
         }
     }
 }
 
+// Criando a function de clicar no título e entrar na notícia
 function cliqueTituloEditar() {
 
+    // Limpando o campode saída e ocultando o formulário de edição
     outMaterias.innerHTML = "";
     formEditar.style.display = "none";
 
+    // Pegando o elemento inteiro do botão que foi clicado e selecionando apenas o id
     var idClicado = this.id;
-    var idAtual = idClicado.substring(7);
+    // Pegando o sétimo caractere da string do id do botão, que será o número
+    idAtual = idClicado.substring(7);
 
+    // Criando os elementos e exibindo a notícia na página usando o id do botão que foi pego acima
     var artMaterias = document.createElement("article");
     artMaterias.className = "noticia-container";
 
@@ -118,32 +134,34 @@ function cliqueTituloEditar() {
     outMaterias.appendChild(artMaterias);
 }
 
-var idAtual;
-
+// Criando a function para editar notícia clicada
 function inserirDados() {
-    //Função para editar notícia clicada;
+    
+    // Pegando o elemento inteiro do botão que foi clicado e selecionando apenas o id
     var idClicado = this.id;
-    idAtual = idClicado.substring(8); //Vetor do botão em: "btEditar" + i;
+    // Pegando o oitavo caractere da string do id do botão, que será o número
+    idAtual = idClicado.substring(8);
 
+    // Exibindo o formulário de edição
     formEditar.style.display = "block";
-    //Colocar o conteúdo de uma notícia nos campos de editar - abre campo de edição;
+    //Colocando o conteúdo de uma notícia nos campos de editar com o id que foi pego acima
     inTitulo.value = vetTitulo[idAtual];
     inTexto.value = vetTexto[idAtual];
     inAutor.value = vetAutor[idAtual];
 }
 
-btEnviar.addEventListener("click", editarDados);
-
+// Criando a function que altera os dados nos vetores
 function editarDados() {
-    //Verificação se foi alterado algo ou não no campo de edição;
+    // Verificação se foi alterado algo ou não nos campos de edição
     if (vetTitulo[idAtual] == inTitulo.value && vetTexto[idAtual] == inTexto.value && vetAutor[idAtual] == inAutor.value) {
         alert("Realize alguma edição.");
 
+    // Verificação se foi digitado algo ou não nos campos de edição
     } else if (inTitulo.value == "" || inTexto.value == "" || inAutor.value == "") {
         alert("Os dados não podem ser vazios.");
 
     } else {
-        //Após as verificações, concluir a alteração do usuário;
+        //Após as verificações, selecionar o que o usuário digitou e inserir os textos dentro dos vetores, ainda usando o id que foi pego acima
         vetTitulo[idAtual] = inTitulo.value;
         vetTexto[idAtual] = inTexto.value;
         vetAutor[idAtual] = inAutor.value;

@@ -31,6 +31,6 @@
 
 /* Estilização do autor da notícia */
 .noticia-autor {
-    font-size: 1.2em; /*tamanho da img 16 * 1.2 */
+    font-size: 1.2em; /*tamanho da img*/
     text-align: end; /*Texto no final da caixa de pertencimento*/
 }

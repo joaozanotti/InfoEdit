@@ -1,9 +1,14 @@
+/*CARACTERISTICAS GLOBAIS------------------------------------------- ------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 main{
   font-family: 'Aleo', sans-serif;
   line-height: 1.5;
   word-wrap: break-word;
 }
+
+/* JAVASCRIPT-------------------------------------------------------------------- */
+/* div que armazena itens da notícia */
 .materia-container {
   display: flex;
   align-items: center;
@@ -16,12 +21,14 @@ main{
   border-bottom: 2px rgb(10, 10, 65) solid;
 }
 
+/* img da notícia cliclada */
 .materia-imagem {
   width: 30%;
   height: auto;
   margin-right: 20px;
 }
 
+/* título da notícia clicada */
 .materia-titulo {
   align-items: center;
   color: rgb(10, 10, 65);
@@ -33,6 +40,7 @@ main{
   line-height: 1.5;
 }
 
+/* autor da notícia clicada */
 .materia-autor {
   width: auto;
   display: flex;
@@ -41,6 +49,7 @@ main{
   margin-bottom: 10px;
 }
 
+/* interação ao enconstar no título resposta */
 .materia-titulo:hover {
   color: rgb(50, 50, 150);
 }

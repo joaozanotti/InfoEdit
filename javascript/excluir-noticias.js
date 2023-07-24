@@ -80,10 +80,10 @@ function pesquisarExcluir() {
                 // Exibindo as notícias
                 outMaterias.appendChild(divContainerMateria);
             }
-            // Verificando se nenhuma notícia foi encontrada e exibindo uma mensagem de alerta
-            if (outMaterias.innerHTML == "") {
-                outMaterias.innerHTML = "Nenhuma matéria encontrada.";
-            }
+        }
+        // Verificando se nenhuma notícia foi encontrada e exibindo uma mensagem de alerta
+        if (outMaterias.innerHTML == "") {
+            outMaterias.innerHTML = "Nenhuma matéria encontrada.";
         }
     }
 }

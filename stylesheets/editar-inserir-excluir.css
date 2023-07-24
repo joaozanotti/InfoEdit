@@ -1,15 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* MAIN------------------------------------------------------------------------------ */
-/* comentar separando editar, excluir e incluir */
+
 main {
-    text-align: center;
+    text-align: center; /* centralizando o main */
 }
 
+/* JAVASCRIPT --------------------------------------------------------------------*/
+/* Div numa class criada no JavaScript para exibir matéria - img, título e autor */
 .materia-container {
-    text-align: start;
+    text-align: start; /*Texto no no começo da div*/
 }
 
+/* Botão do EDITAR, EXCLUIR e INSERIR do resultado da pesquisa e de envio do EDITAR, EXCLUIR e INSERIR notícias */
+.materia-button, .noticia-button{
+    font-family: 'Aleo', sans-serif;
+    font-size: 16px;
+    background-color: rgb(13, 13, 69);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+/* JAVASCRIPT ---------------------------------------------------------------------*/
+
+/* HTML ---------------------------------------------------------------------------*/
+/*Título de função da página - do html*/
 .tituloFixo{
     margin: 50px 0px 30px 0px;
     font-size: 32px;
@@ -17,11 +32,14 @@ main {
     text-decoration: underline rgb(13, 13, 69);
 }
 
+/*subtítulo de função da página - do html */
 .subtitulo{
     font-size: 22px;
     margin-bottom: 20px;
     display: block;
 }
+
+/* Textearea e input de texto do formulário de edição - do html */
 .subtopico{
     font-family: 'Aleo', sans-serif;
     font-size: 18px;
@@ -31,6 +49,7 @@ main {
     border: black solid;
 }
 
+/* Botão de EDITAR, EXCLUIR e INSERIR do formulário de EDITAR, EXCLUIR e INSERIR - do html */
 .btFixo{
     font-family: 'Aleo', sans-serif;
     font-size: 18px;
@@ -39,13 +58,16 @@ main {
     border-radius: 20px;
     color: white;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
-/* form */
+/* FORMULÁRIO*/
+/* Div do formulário, armazenando caixa de texto e de preenchimento */
 .form-group {
     margin-bottom: 20px;
 }
 
+/* Estilização de caixas de entrada */
 input{
     width: 50%;
     padding: 5px;
@@ -56,18 +78,4 @@ textarea {
     padding: 5px;
     font-size: 16px;
 }
-
-input[type="submit"] {
-    background-color: rgb(10, 10, 65);
-    color: white;
-    cursor: pointer;
-}
-#btEnviar{
-    font-family: 'Aleo', sans-serif;
-    font-size: 18px;
-    background-color: rgb(13, 13, 69);
-    padding: 10px;
-    border-radius: 20px;
-    color: white;
-    margin-bottom: 20px;
-}
+/* HTML ---------------------------------------------------------------------------*/

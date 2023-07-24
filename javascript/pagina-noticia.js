@@ -1,4 +1,4 @@
-const outMaterias = document.getElementById("outMaterias");
+const outMaterias = document.getElementById("outMaterias"); //Armazena as matérias já percorridas;
 
 for (var i = 0; i < vetTitulo.length; i++) {
 
@@ -26,15 +26,14 @@ for (var i = 0; i < vetTitulo.length; i++) {
   divConteudoMateria.appendChild(titulo);
   divConteudoMateria.appendChild(autor);
 
-  divContainerMateria.appendChild(divConteudoMateria);
+  divContainerMateria.appendChild(divConteudoMateria); //o container é para guardar o conteudo, por questão de estilização;
 
-  outMaterias.appendChild(divContainerMateria);
+  outMaterias.appendChild(divContainerMateria); //Apresenta matéria de um vetor percorrida;
 }
 
-const inBuscaAutor = document.getElementById("inBuscaAutor");
-const btHeader = document.getElementById("btHeader");
+const inBuscaAutor = document.getElementById("inBuscaAutor"); //Campo de preenchimento de pesquisa;
 
-inBuscaAutor.addEventListener("keyup", buscarAutor);
+inBuscaAutor.addEventListener("keyup", buscarAutor); //keyup- TOQUE NO TECLADO;
 
 function buscarAutor() {
   pesquisaAutor = (inBuscaAutor.value).toUpperCase();
@@ -42,6 +41,8 @@ function buscarAutor() {
 
   for (var i = 0; i < vetAutor.length; i++) {
     let autorAux = vetAutor[i].toUpperCase();
+
+    //Verificação de pertencimento das letras preenchidas pelo usuário em algum determinado elemento de um vetor;
     if (autorAux.indexOf(pesquisaAutor) >= 0) {
 
       var divConteinerMateria = document.createElement("div");
@@ -57,7 +58,7 @@ function buscarAutor() {
       var titulo = document.createElement("h1");
       titulo.className = "materia-titulo";
       titulo.innerHTML = vetTitulo[i];
-      titulo.id = "noticia" + i;
+      titulo.id = "noticia" + i; // Nome da id + a posição (i) - que mais abaixo é usado para encontrar a posição do título clicado através da 'substring' - 8 letras/nº são de 0 a 7 no vetor.
       titulo.addEventListener("click", cliqueTitulo);
 
       var autor = document.createElement("h3");
@@ -79,7 +80,7 @@ function cliqueTitulo() {
   outMaterias.innerHTML = "";
 
   var idClicado = this.id;
-  var idAtual = idClicado.substring(7);
+  var idAtual = idClicado.substring(7); // pois o vetor começa do 0 - 8 letras/nº são de 0 a 7 no vetor.
 
   var artMaterias = document.createElement("article");
   artMaterias.className = "noticia-container";

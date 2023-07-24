@@ -1,15 +1,8 @@
+/* Liinkando fonte do site */
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.noticia-imagem {
-    width: 50%;
-    margin: 1em 0;
-}
-
-.noticia-titulo {
-    font-size: 2.5em;
-    text-transform: uppercase;
-}
-
+/* JAVASCRIPT----------------------------------------------------------------------- */
+/* Article - com todos os elementos da notícia */
 .noticia-container {
     text-align: center;
     width: 70%;
@@ -17,13 +10,27 @@
     padding: 2em;
 }
 
+/* Estilização da imagem da notícia */
+.noticia-imagem {
+    width: 50%;
+    margin: 1em 0;
+}
+
+/* Estilização do título da notícia */
+.noticia-titulo {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+/* Estilização do texto da notícia */
 .noticia-texto {
-    text-align: justify;
+    text-align: justify; /*Tippo de alinhamento das palavras*/
     margin: 20px 0;
     font-size: 20px;
 }
 
+/* Estilização do autor da notícia */
 .noticia-autor {
-    font-size: 1.2em;
-    text-align: end;
+    font-size: 1.2em; /*tamanho da img 16 * 1.2 */
+    text-align: end; /*Texto no final da caixa de pertencimento*/
 }

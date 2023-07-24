@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link REL="SHORTCUT ICON" HREF="../imagens/ImagensHeaderFooter/logo.png">
     <title>Excluir Notícias - INFOEDIT</title>
+
+    <!-- Referência aos arquivos CSS necessários -->
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
     <link rel="stylesheet" href="../stylesheets/editar-inserir-excluir.css">
@@ -15,7 +18,7 @@
 <body>
     <!--Cabeçalho comum do site-->
     <header>
-        
+        <!-- Caixa de elementos da navegação -->
         <div class="caixaHeader">
             <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
             <nav>
@@ -43,12 +46,15 @@
     </header>
     <!-- Corpo da página inicial do site -->
     <main>
+        <!-- Título/subtítulos de função da página -->
         <h1 class="tituloFixo">EXCLUA UMA NOTÍCIA</h1>
         <p class="subtitulo">Pesquisar notícia:</p>
 
+        <!-- Input de pesquisa da notícia que o usuário quer excluir-->
         <input type="search" id="inPesquisaExcluir" class="subtopico">
         <p><input type="button" value="Pesquisar" id="btPesquisaExcluir" class="btFixo"></p>
         
+        <!-- Saída da pesquisa -->
         <div id="outMaterias"></div>
     </main>
 
@@ -57,6 +63,8 @@
         <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
         <p id="copyright">&copy; Copyright INFOEDIT</p>
     </footer>
+
+        <!-- Referência aos arquivos JavaScript necessários -->
     <script src="../javascript/vetores.js"></script>
     <script src="../javascript/excluir-noticias.js"></script>
     

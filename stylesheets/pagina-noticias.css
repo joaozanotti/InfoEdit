@@ -1,21 +1,23 @@
 /*CARACTERISTICAS GLOBAIS------------------------------------------- ------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-main{
-  font-family: 'Aleo', sans-serif;
+main {
   line-height: 1.5;
-  word-wrap: break-word; /*quebra de linha de acordo com o tamanho do main*/
+  word-wrap: break-word;
+  /*quebra de linha de acordo com o tamanho do main*/
   text-align: center;
 }
 
 /* JAVASCRIPT-------------------------------------------------------------------- */
 /* div que armazena itens da notícia */
 .materia-container {
-  display: flex; /*elemento embaixo do outro*/
+  display: flex;
+  /*elemento embaixo do outro*/
   align-items: center;
   width: auto;
-  max-width: 40%; /*maximo de ocupação*/
-  min-width: 35%; /*mínimo de ocupação*/
+  max-width: 40%;
+  /*maximo de ocupação*/
+  min-width: 35%;
+  /*mínimo de ocupação*/
   padding: 18px;
   margin: 60px auto;
   background-color: rgba(10, 10, 65, 0.050);
@@ -39,7 +41,8 @@ main{
   cursor: pointer;
   font-family: 'Aleo', sans-serif;
   text-transform: uppercase;
-  line-height: 1.5; /*altura entre as linhas*/
+  line-height: 1.5;
+  /*altura entre as linhas*/
 }
 
 /* autor da notícia clicada */
@@ -56,7 +59,8 @@ main{
   color: rgb(50, 50, 150);
 }
 
-.materia-button, .noticia-button{
+.materia-button,
+.noticia-button {
   font-family: 'Aleo', sans-serif;
   font-size: 16px;
   background-color: rgb(13, 13, 69);

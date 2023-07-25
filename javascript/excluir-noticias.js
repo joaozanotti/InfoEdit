@@ -20,7 +20,7 @@ function pesquisarExcluir() {
         alert("Digite um título.");
         inPesquisaExcluir.focus();
         outMaterias.innerHTML = "";
- 
+
     } else {
         // Criando a estrutura de repetição para percorrer o vetor de título
         for (var i = 0; i < vetTitulo.length; i++) {
@@ -152,13 +152,13 @@ function excluirDados() {
 
     // Seleciona o elemento dentro do vetor usando o idAtual e o próximo número seleciona quantos elementos a serem excluídos;
     vetTitulo.splice(idAtual, 1);
-    vetAutor.splice(idAtual, 1);        
+    vetAutor.splice(idAtual, 1);
     vetImagens.splice(idAtual, 1);
     vetTexto.splice(idAtual, 1);
 
     // Limpa o input de pesquisa das notícias
     inPesquisaExcluir.value = "";
     // Exibe uma mensagem de confirmação ao usuário
-    outMaterias.innerHTML = "Notícia Excluida com sucesso!";
+    outMaterias.innerHTML = "Notícia excluída com sucesso!";
 
 }

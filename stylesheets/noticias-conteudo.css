@@ -21,13 +21,16 @@
 
 /* Estilização do texto da notícia */
 .noticia-texto {
-    text-align: justify; /*Tippo de alinhamento das palavras*/
+    text-align: justify;
+    /*Tippo de alinhamento das palavras*/
     margin: 20px 0;
     font-size: 20px;
 }
 
 /* Estilização do autor da notícia */
 .noticia-autor {
-    font-size: 1.2em; /*tamanho da img*/
-    text-align: end; /*Texto no final da caixa de pertencimento*/
+    font-size: 1.2em;
+    /*tamanho da img*/
+    text-align: end;
+    /*Texto no final da caixa de pertencimento*/
 }

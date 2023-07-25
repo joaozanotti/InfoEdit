@@ -1,10 +1,10 @@
 /* Estilização login */
 
-
 /*div - main*/
 main {
     margin: auto;
 }
+
 .login {
     /*Centraliza seus elementos*/
     text-align: center;
@@ -13,7 +13,7 @@ main {
     /*arredondamento das vértices*/
     border-radius: 10px;
     background-color: #ebeaea;
-     /*tamanho da div*/
+    /*tamanho da div*/
     width: 60%;
     /*espaçamento interno*/
     padding: 50px 10px;
@@ -62,11 +62,4 @@ main {
     margin: 10px auto;
     /*seta muda para mão*/
     cursor: pointer;
-}
-
-/*logo do site na caixa da div com elementos do login*/
-.logoLogin {
-    width: 30%;
-    text-align: center;
-    padding-top: 15px;
 }

@@ -29,7 +29,7 @@ function pesquisaEditar() {
         inPesquisaEditar.focus();
         outMaterias.innerHTML = "";
 
-    // Se tiver digitado, o código continua
+        // Se tiver digitado, o código continua
     } else {
         // Percorrendo o vetor de título
         for (var i = 0; i < vetTitulo.length; i++) {
@@ -157,7 +157,7 @@ function cliqueTituloEditar() {
 
 // Criando a function para editar notícia clicada
 function inserirDados() {
-    
+
     // Pegando o elemento inteiro do botão que foi clicado e selecionando apenas o id
     var idClicado = this.id;
     // Pegando o oitavo caractere da string do id do botão, que será o número
@@ -177,7 +177,7 @@ function editarDados() {
     if (vetTitulo[idAtual] == inTitulo.value && vetTexto[idAtual] == inTexto.value && vetAutor[idAtual] == inAutor.value) {
         alert("Realize alguma edição.");
 
-    // Verificação se foi digitado algo ou não nos campos de edição
+        // Verificação se foi digitado algo ou não nos campos de edição
     } else if (inTitulo.value == "" || inTexto.value == "" || inAutor.value == "") {
         alert("Os dados não podem ser vazios.");
 

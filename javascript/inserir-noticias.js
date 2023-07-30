@@ -1,3 +1,9 @@
+// Recupera os dados das notícias armazenados na sessionStorage
+vetTitulo = JSON.parse(sessionStorage.getItem("vetTitulo"));
+vetTexto = JSON.parse(sessionStorage.getItem("vetTexto"));
+vetAutor = JSON.parse(sessionStorage.getItem("vetAutor"));
+vetImagens = JSON.parse(sessionStorage.getItem("vetImagens"));
+
 // Referenciando os elementos no documento HTML
 const inTitulo = document.getElementById("inTitulo");
 const inAutor = document.getElementById("inAutor");
@@ -39,6 +45,17 @@ function adicionarDados() {
         vetTitulo.push(tituloAdicionado);
         vetAutor.push(autorAdicionado);
         vetTexto.push(conteudoAdicionado);
+
+        // Armazenando os novos dados no sessionStorage
+        sessionStorage.setItem("vetTitulo", JSON.stringify(vetTitulo));
+        sessionStorage.setItem("vetTexto", JSON.stringify(vetTexto));
+        sessionStorage.setItem("vetAutor", JSON.stringify(vetAutor));
+        sessionStorage.setItem("vetImagens", JSON.stringify(vetImagens));
+
+        // Limpando os campos preenchidos pelo usuário
+        inTitulo.value = "";
+        inAutor.value = "";
+        inTexto.value = "";
 
         // Pegando o número total de elementos do vetor e diminuindo 1 para conseguirmos usar como índice (Exemplo: se tiverem 7 elementos, ele pega o número 7 e diminui 1, ficando com o número 6, que é o valor da última posição do vetor nesse caso)
         var indice = vetTitulo.length - 1;

@@ -1,3 +1,9 @@
+// Recupera os dados das notícias armazenados na sessionStorage
+vetTitulo = JSON.parse(sessionStorage.getItem("vetTitulo"));
+vetTexto = JSON.parse(sessionStorage.getItem("vetTexto"));
+vetAutor = JSON.parse(sessionStorage.getItem("vetAutor"));
+vetImagens = JSON.parse(sessionStorage.getItem("vetImagens"));
+
 // Referenciando os elementos no documento HTML
 const inPesquisaEditar = document.getElementById("inPesquisaEditar");
 const btPesquisaEditar = document.getElementById("btPesquisaEditar");
@@ -186,6 +192,14 @@ function editarDados() {
         vetTitulo[idAtual] = inTitulo.value;
         vetTexto[idAtual] = inTexto.value;
         vetAutor[idAtual] = inAutor.value;
+        
+        // Armazenando os dados modificados no sessionStorage
+        sessionStorage.setItem("vetTitulo", JSON.stringify(vetTitulo));
+        sessionStorage.setItem("vetTexto", JSON.stringify(vetTexto));
+        sessionStorage.setItem("vetAutor", JSON.stringify(vetAutor));
+        sessionStorage.setItem("vetImagens", JSON.stringify(vetImagens));
+
+        // Ocultando o formulário de edição e exibindo mensagem de confirmação
         formEditar.style.display = "none";
         inPesquisaEditar.value = "";
         outMaterias.innerHTML = "Notícia alterada com sucesso!";

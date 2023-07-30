@@ -42,3 +42,16 @@ var vetImagens = [
   "imgRadicalInfluenciaTecnologia.png",
   "imgMeninasNoLimite.png"
 ];
+
+// Verifica se os dados já foram armazenados na sessionStorage
+if (!sessionStorage.getItem('dataStored')) {
+
+  // Armazena os dados na sessionStorage se ainda não foram armazenados
+  sessionStorage.setItem("vetTitulo", JSON.stringify(vetTitulo));
+  sessionStorage.setItem("vetTexto", JSON.stringify(vetTexto));
+  sessionStorage.setItem("vetAutor", JSON.stringify(vetAutor));
+  sessionStorage.setItem("vetImagens", JSON.stringify(vetImagens));
+
+  // Confirma que os dados foram armazenados
+  sessionStorage.setItem('dataStored', 'true');
+}

@@ -1,3 +1,9 @@
+// Recupera os dados das notícias armazenados na sessionStorage
+vetTitulo = JSON.parse(sessionStorage.getItem("vetTitulo"));
+vetTexto = JSON.parse(sessionStorage.getItem("vetTexto"));
+vetAutor = JSON.parse(sessionStorage.getItem("vetAutor"));
+vetImagens = JSON.parse(sessionStorage.getItem("vetImagens"));
+
 // Referenciando os elementos no documento HTML
 const inPesquisaExcluir = document.getElementById("inPesquisaExcluir");
 const btPesquisaExcluir = document.getElementById("btPesquisaExcluir");
@@ -156,9 +162,14 @@ function excluirDados() {
     vetImagens.splice(idAtual, 1);
     vetTexto.splice(idAtual, 1);
 
+    // Armazenando os dados modificados no sessionStorage
+    sessionStorage.setItem("vetTitulo", JSON.stringify(vetTitulo));
+    sessionStorage.setItem("vetTexto", JSON.stringify(vetTexto));
+    sessionStorage.setItem("vetAutor", JSON.stringify(vetAutor));
+    sessionStorage.setItem("vetImagens", JSON.stringify(vetImagens));
+
     // Limpa o input de pesquisa das notícias
     inPesquisaExcluir.value = "";
     // Exibe uma mensagem de confirmação ao usuário
     outMaterias.innerHTML = "Notícia excluída com sucesso!";
-
 }

@@ -1,3 +1,9 @@
+// Recupera os dados das notícias armazenados na sessionStorage
+vetTitulo = JSON.parse(sessionStorage.getItem("vetTitulo"));
+vetTexto = JSON.parse(sessionStorage.getItem("vetTexto"));
+vetAutor = JSON.parse(sessionStorage.getItem("vetAutor"));
+vetImagens = JSON.parse(sessionStorage.getItem("vetImagens"));
+
 // Referenciando os elementos no documento HTML
 const outMaterias = document.getElementById("outMaterias");
 const inBuscaAutor = document.getElementById("inBuscaAutor");

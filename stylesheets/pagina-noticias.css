@@ -5,6 +5,7 @@ main {
   word-wrap: break-word;
   /*quebra de linha de acordo com o tamanho do main*/
   text-align: center;
+  margin: auto 0;
 }
 
 /* JAVASCRIPT-------------------------------------------------------------------- */
@@ -68,4 +69,8 @@ main {
   color: white;
   cursor: pointer;
   width: 100px;
+}
+
+#outMaterias {
+  margin-bottom: 30px;
 }

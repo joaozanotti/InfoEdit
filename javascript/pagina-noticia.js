@@ -112,7 +112,7 @@ function buscarAutor() {
   }
   // Verificando se nenhuma notícia foi encontrada e exibindo uma mensagem de alerta
   if (outMaterias.innerHTML == "") {
-    outMaterias.innerHTML = "Nenhuma matéria encontrada.";
+    outMaterias.innerHTML = "Nenhuma notícia deste autor encontrada.";
   }
 }
 

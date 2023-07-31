@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link REL="SHORTCUT ICON" HREF="../imagens/ImagensHeaderFooter/logo.png">
+    <link rel="shortcut icon" href="../imagens/ImagensHeaderFooter/icone.png">
     <title>Inserir Notícias - INFOEDIT</title>
 
     <!-- Referência aos arquivos CSS necessários -->
@@ -66,21 +66,22 @@
         <form>
             <!-- campo de preencher título -->
             <div class="form-group">
-                <label class="subtitulo">Título da Matéria:</label>
-                <input type="text" id="inTitulo" name="nome" class="subtopico" required>
+                <label class="subtitulo" for="inTitulo">Título da Matéria:</label>
+                <input type="text" id="inTitulo" class="subtopico" required>
             </div>
 
             <!-- campo de preencher texto -->
             <div class="form-group">
-                <label class="subtitulo">Texto da Matéria:</label>
-                <textarea type="text" id="inTexto" name="texto" class="subtopico" rows="10" required></textarea>
+                <label class="subtitulo" for="inTexto">Texto da Matéria:</label>
+                <textarea type="text" id="inTexto" class="subtopico" rows="10" required></textarea>
             </div>
 
             <!-- campo de preencher autor -->
             <div class="form-group">
-                <label class="subtitulo">Autor da Matéria:</label>
-                <input type="text" id="inAutor" name="autor" class="subtopico" required>
+                <label class="subtitulo" for="inAutor">Autor da Matéria:</label>
+                <input type="text" id="inAutor" class="subtopico" required>
             </div>
+
             <div class="form-group">
                 <input type="button" id="btAdicionar" value="Incluir" class="btFixo">
             </div>

@@ -50,8 +50,12 @@ nav {
    /*alinha o texto no centro de um componente do body*/
 }
 
+nav ul {
+   display: flex;
+   align-items: center;
+}
+
 nav li {
-   display: inline;
    margin: 0 0 0 15px;
 }
 
@@ -71,12 +75,11 @@ nav a {
 
 /* li de com o input de busca utilizado para buscar autores*/
 #campoPesquisa {
-   border-radius: 8px;
    background-color: white;
    color: black;
-   display: inline;
+   display: flex;
+   align-items: center;
    font-size: 16px;
-   padding: 10px;
    border-radius: 8px;
    border: 1px white solid;
 }
@@ -84,7 +87,6 @@ nav a {
 /* input utilizado para buscar autores */
 #inBuscaAutor {
    color: black;
-   display: inline;
    font-size: 16px;
    padding: 10px;
    border-radius: 8px;
@@ -93,11 +95,11 @@ nav a {
 
 /* lupa simbólica do input de busca */
 #imgLupa {
-   width: 15px;
-   display: inline;
+   width: 20px;
    background-color: white;
+   padding-right: 8px;
+   padding-left: 3px;
    border-radius: 8px;
-   align-items: center;
    /*Alinha as caixas com o ponto centro de outras*/
 }
 

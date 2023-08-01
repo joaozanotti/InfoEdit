@@ -8,11 +8,27 @@ vetImagens = JSON.parse(sessionStorage.getItem("vetImagens"));
 const inTitulo = document.getElementById("inTitulo");
 const inAutor = document.getElementById("inAutor");
 const inTexto = document.getElementById("inTexto");
+const inImagem = document.getElementById("inImagem");
 const btAdicionar = document.getElementById("btAdicionar");
 const outMaterias = document.getElementById("outMaterias");
 
 // Adicionando o evento de clique no botão para adicionar os dados
 btAdicionar.addEventListener("click", adicionarDados);
+
+var imagemAdicionada;
+inImagem.addEventListener("change", function(event) {
+    const imagem = event.target;
+
+    if (imagem.files && imagem.files[0]) {
+      const fileReader = new FileReader();
+
+      fileReader.onload = function() {
+        imagemAdicionada = fileReader.result;
+      };
+
+      fileReader.readAsDataURL(imagem.files[0]);
+    }
+});
 
 // Criando a function para adicionar os dados
 function adicionarDados() {
@@ -45,6 +61,7 @@ function adicionarDados() {
         vetTitulo.push(tituloAdicionado);
         vetAutor.push(autorAdicionado);
         vetTexto.push(conteudoAdicionado);
+        vetImagens.push(imagemAdicionada);
 
         // Armazenando os novos dados no sessionStorage
         sessionStorage.setItem("vetTitulo", JSON.stringify(vetTitulo));
@@ -56,6 +73,7 @@ function adicionarDados() {
         inTitulo.value = "";
         inAutor.value = "";
         inTexto.value = "";
+        inImagem.value = "";
 
         // Pegando o número total de elementos do vetor e diminuindo 1 para conseguirmos usar como índice (Exemplo: se tiverem 7 elementos, ele pega o número 7 e diminui 1, ficando com o número 6, que é o valor da última posição do vetor nesse caso)
         var indice = vetTitulo.length - 1;
@@ -68,7 +86,7 @@ function adicionarDados() {
 
         // Criando as imagens das notícias
         var img = document.createElement("img");
-        img.src = "../imagens/ImagensNoticias/" + vetImagens[indice];
+        img.src = vetImagens[indice];
         img.className = "materia-imagem";
 
         // Criando divs para estilização
@@ -124,7 +142,7 @@ function cliqueTituloAdicionar() {
 
     // Criando a imagem da notícia
     var img = document.createElement("img");
-    img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
+    img.src = vetImagens[idAtual];
     img.className = "noticia-imagem";
 
     // Criando o texto da notícia

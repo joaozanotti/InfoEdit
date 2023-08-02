@@ -35,12 +35,12 @@ var vetTexto = [
 
 // Vetor de imagens das notícias
 var vetImagens = [
-  "imgHomemParaplegico.png",
-  "imgAreasInteligenciaArtificial.png",
-  "imgUnicoRestauranteDoMundo.png",
-  "imgTransplanteCerebro.png",
-  "imgRadicalInfluenciaTecnologia.png",
-  "imgMeninasNoLimite.png"
+  "../imagens/ImagensNoticias/imgHomemParaplegico.png",
+  "../imagens/ImagensNoticias/imgAreasInteligenciaArtificial.png",
+  "../imagens/ImagensNoticias/imgUnicoRestauranteDoMundo.png",
+  "../imagens/ImagensNoticias/imgTransplanteCerebro.png",
+  "../imagens/ImagensNoticias/imgRadicalInfluenciaTecnologia.png",
+  "../imagens/ImagensNoticias/imgMeninasNoLimite.png"
 ];
 
 // Verifica se os dados já foram armazenados na sessionStorage

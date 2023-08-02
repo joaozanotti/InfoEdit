@@ -38,18 +38,19 @@ function adicionarDados() {
     // Verificando se o usuário preencheu todos os campos
     if (inTitulo.value == "") {
         alert("Escreva um título válido para a notícia.");
-        inTitulo.value = "";
         inTitulo.focus();
 
     } else if (inAutor.value == "") {
         alert("Escreva um autor válido para esta notícia.");
-        inAutor.value = "";
         inAutor.focus();
 
     } else if (inTexto.value == "") {
-        alert("Ecreva um conteúdo válido para a matéria.");
-        inTexto.value = "";
+        alert("Escreva um conteúdo válido para a matéria.");
         inTexto.focus();
+
+    } else if (inImagem.value == "") {
+        alert("Selecione uma imagem válida para a matéria.");
+        inImagem.focus();
 
     } else {
         // Se estiver tudo preenchido, ele pega os textos que o usuário digitou e guarda em variáveis

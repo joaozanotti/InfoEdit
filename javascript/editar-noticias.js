@@ -54,7 +54,7 @@ function pesquisaEditar() {
 
                 // Criando as imagens das notícias
                 var img = document.createElement("img");
-                img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
+                img.src = vetImagens[i];
                 img.className = "materia-imagem";
 
                 // Criando divs para estilização
@@ -129,7 +129,7 @@ function cliqueTituloEditar() {
 
     // Criando a imagem da notícia
     var img = document.createElement("img");
-    img.src = "../imagens/ImagensNoticias/" + vetImagens[idAtual];
+    img.src = vetImagens[idAtual];
     img.className = "noticia-imagem";
 
     // Criando o texto da notícia

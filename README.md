@@ -3,7 +3,7 @@
   <img src="https://i.ibb.co/fM254dj/infoedit.png" width="500px">
 </div>
 
-## 📄 Descrição do projeto
+## 📝 Descrição do projeto
 Este projeto se trata de um site realizado em um trabalho interdisciplinar no ano de 2023 com um grupo de 5 pessoas.<br>
 É focado no gerenciamento de notícias, onde o objetivo é trabalhar em cima de alguns vetores para exibir as notícias e adicionar funcionalidades para gerenciá-las.<br>
 Através de um login, é possível criar, editar e excluir matérias. Também possui um sistema simples de pesquisa.<br>
@@ -11,10 +11,11 @@ Para acessar a área de gerenciamento de notícias, vá para a página de login 
 
 ## 🛠 Tecnologias utilizadas
 <div>
-  <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg">
-  <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
-  <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg">
-  <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white">
+  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white">
 </div>
 
 ## 🚀 Deploy
